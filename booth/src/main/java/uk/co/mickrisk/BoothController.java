@@ -50,8 +50,11 @@ public class BoothController {
 			return "{\"message\":\"failed to validate voter\"}";
 		}
 
+		voterValidator.registerVote(voter.getVoterId());
+		
 		Vote vote = new Vote(candidateId);
 		voteRepository.save(vote);
+		
 		return "{\"message\":\"vote successfully cast\"}";
 
 	}
