@@ -34,7 +34,7 @@ public class BoothController {
 	@RequestMapping(value = "/vote/{candidateId}", method = RequestMethod.POST)
 	public void castVote(@PathVariable("candidateId") long candidateId) {
 		
-		candidateValidator.getCandidates();
+		Boolean validCandidate = candidateValidator.validateCandidates();
 		
 		logger.debug("Candidates");
 		Vote vote = new Vote(candidateId);

@@ -7,7 +7,7 @@ import org.springframework.data.repository.Repository;
 
 public interface CandidateRepository extends Repository<Candidate, Long>{
 	
-	public Candidate findByCandidateId(long candidateId);
+	public Candidate findByCandidateId(Long candidateId);
 	public Candidate findByCandidateName(String candidateName);
 	public List<Candidate> findAll();
 	public void save(Candidate candidate);

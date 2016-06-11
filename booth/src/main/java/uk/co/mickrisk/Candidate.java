@@ -26,4 +26,12 @@ public class Candidate {
 	public void setCandidateName(String candidateName) {
 		this.candidateName = candidateName;
 	}
+
+	public Long getCandidateId() {
+		return candidateId;
+	}
+
+	public void setCandidateId(Long candidateId) {
+		this.candidateId = candidateId;
+	}
 }

@@ -4,27 +4,60 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestOperations;
 import org.springframework.web.client.RestTemplate;
 
-@Service
+@Component
 public class CandidateValidator {
 	
 	protected Logger logger = Logger.getLogger(CandidateValidator.class.getName());
-	RestTemplate restTemplate;
+	private RestOperations restTemplate;
+	private DiscoveryClient discoveryClient;
 	
 	@Autowired
-	public CandidateValidator(RestTemplate restTemplate){
+	public CandidateValidator(RestOperations restTemplate,DiscoveryClient discoveryClient){
 		this.restTemplate = restTemplate;
+		this.discoveryClient = discoveryClient;
 	}
 	
-	public void getCandidates() {
+	public String getCandidateServiceUrl() throws InterruptedException
+	{
+		List<ServiceInstance> serviceInstances = null;
+		long time = System.currentTimeMillis();
+		long timeout = time + 60000;
+		while(System.currentTimeMillis() < timeout)
+		{
+			serviceInstances = discoveryClient.getInstances("voting-candidate");
+			if(serviceInstances != null && serviceInstances.size() > 0)
+			{
+				logger.info("voting-candidate Url:" + serviceInstances.get(0).getUri());
+				return serviceInstances.get(0).getUri().toString();
+			}
+			Thread.sleep(1000);
+		}
+		return "";
+	}
+	
+	public Boolean validateCandidates() {
+		
+		String url = "";
+		try {
+			url = getCandidateServiceUrl();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+			return false;
+		}
+		
 		ResponseEntity<List<Candidate>> exchange =
                 this.restTemplate.exchange(
-                        "http://voting-candidate/candidates",
+                		url + "/candidates",
                         HttpMethod.GET,
                         null,
                         new ParameterizedTypeReference<List<Candidate>>() {
@@ -35,6 +68,16 @@ public class CandidateValidator {
         for(Candidate candidate : candidates){
         	logger.info(candidate.getCandidateName());
         }
+        return true;
+//		String url = "";
+//		try {
+//			url = getCandidateServiceUrl();
+//		} catch (InterruptedException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		String result = restTemplate.getForObject(url + "/candidates", String.class);
+//		logger.info(result);
 	}
 
 }

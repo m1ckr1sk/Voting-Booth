@@ -1,5 +1,6 @@
 package uk.co.mickrisk;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.log4j.Logger;
@@ -18,15 +19,14 @@ public class CandidateController {
 
 	@Autowired
 	public CandidateController(CandidateRepository candidateRepository) {
-		
-
+		this.candidateRepository = candidateRepository;
 		logger.info("CandidateRepository says system has " + candidateRepository.countCandidates() + " candidates");
 	}
 
-	@RequestMapping(value = "/candidates",method=RequestMethod.GET, produces="application/json")
-	@ResponseBody
+	@RequestMapping(value = "/candidates",method=RequestMethod.GET)
 	public List<Candidate> getCandidates() {
-		return candidateRepository.findAll();
+		List<Candidate> candidates = candidateRepository.findAll();
+		return candidates;
 	}
 
 	@RequestMapping(value = "/candidate/{candidateName}", method = RequestMethod.POST)
