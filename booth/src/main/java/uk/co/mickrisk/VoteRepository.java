@@ -4,6 +4,6 @@ import org.springframework.data.repository.Repository;
 
 public interface VoteRepository extends Repository<Vote, Long>{
 	
-	
+	public void save(Vote vote);
 
 }

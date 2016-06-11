@@ -32,4 +32,8 @@ public class Candidate {
 		this.candidateName = candidateName;
 	}
 
+	public Long getCandidateId() {
+		return candidateId;
+	}
+
 }

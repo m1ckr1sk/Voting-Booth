@@ -18,12 +18,13 @@ public class CandidateController {
 
 	@Autowired
 	public CandidateController(CandidateRepository candidateRepository) {
-		this.candidateRepository = candidateRepository;
+		
 
 		logger.info("CandidateRepository says system has " + candidateRepository.countCandidates() + " candidates");
 	}
 
-	@RequestMapping("/candidates")
+	@RequestMapping(value = "/candidates",method=RequestMethod.GET, produces="application/json")
+	@ResponseBody
 	public List<Candidate> getCandidates() {
 		return candidateRepository.findAll();
 	}
