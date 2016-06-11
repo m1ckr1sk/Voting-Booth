@@ -67,15 +67,12 @@ public class CandidateValidator {
 		Boolean foundCandidate = false;
         List<Candidate> candidates = exchange.getBody();
         for(Candidate candidate : candidates){
-        	logger.info(candidate.getCandidateName());
         	if(candidate.getCandidateId() == candidateId)
         	{
-        		logger.info("Found valid candidate:"+candidate.getCandidateName());
         		foundCandidate = true;
         	}
         }
     
-        logger.info("Returning:"+foundCandidate);
         return foundCandidate;
 	}
 

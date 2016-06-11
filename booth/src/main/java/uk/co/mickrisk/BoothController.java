@@ -35,18 +35,13 @@ public class BoothController {
 	@RequestMapping(value = "/vote/{candidateId}", method = RequestMethod.POST)
 	public String castVote(@PathVariable("candidateId") long candidateId) {
 
-		logger.info("Checking the candidate");
 		Boolean validCandidate = candidateValidator.validateCandidate(candidateId);
-		logger.info("Candidate came back");
 		if (!validCandidate) {
 			return "{\"message\":\"failed to find candidate\"}";
 		}
 
-		logger.info("Creating the vote");
 		Vote vote = new Vote(candidateId);
-		logger.info("Saving the vote");
 		voteRepository.save(vote);
-		logger.info("Returning response");
 		return "{\"message\":\"vote successfully cast\"}";
 
 	}
