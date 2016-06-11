@@ -45,7 +45,7 @@ public class CandidateValidator {
 		return "";
 	}
 	
-	public Boolean validateCandidates() {
+	public Boolean validateCandidate(long candidateId) {
 		
 		String url = "";
 		try {
@@ -64,20 +64,19 @@ public class CandidateValidator {
                         },
                         (Object) "mstine");
 
+		Boolean foundCandidate = false;
         List<Candidate> candidates = exchange.getBody();
         for(Candidate candidate : candidates){
         	logger.info(candidate.getCandidateName());
+        	if(candidate.getCandidateId() == candidateId)
+        	{
+        		logger.info("Found valid candidate:"+candidate.getCandidateName());
+        		foundCandidate = true;
+        	}
         }
-        return true;
-//		String url = "";
-//		try {
-//			url = getCandidateServiceUrl();
-//		} catch (InterruptedException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//		String result = restTemplate.getForObject(url + "/candidates", String.class);
-//		logger.info(result);
+    
+        logger.info("Returning:"+foundCandidate);
+        return foundCandidate;
 	}
 
 }
