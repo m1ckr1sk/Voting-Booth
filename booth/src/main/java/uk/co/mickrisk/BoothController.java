@@ -1,27 +1,21 @@
 package uk.co.mickrisk;
 
-import java.util.List;
-
-import org.apache.commons.lang.builder.ToStringBuilder;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.client.ServiceInstance;
-import org.springframework.cloud.client.discovery.DiscoveryClient;
-import org.springframework.core.ParameterizedTypeReference;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.client.RestTemplate;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 @RestController
 public class BoothController {
 
 	protected Logger logger = Logger.getLogger(BoothController.class.getName());
+	protected ObjectMapper mapper = new ObjectMapper();
 
 	protected VoteRepository voteRepository;
 
@@ -58,5 +52,13 @@ public class BoothController {
 		return "{\"message\":\"vote successfully cast\"}";
 
 	}
+	
+	@RequestMapping(value = "/close", method = RequestMethod.GET)
+	public String closeBooth() throws NumberFormatException, JsonProcessingException {
+		VoteCollection voteCollection = new VoteCollection(new Long("2"));
+		voteCollection.setVotes(voteRepository.findAll());
+		return mapper.writeValueAsString(voteCollection);
+	}
+
 
 }
