@@ -3,6 +3,8 @@ An service to provide a system to count votes from multiple voting booths for mu
 
 The services are currently spring boot rest services. It uses the Eureka service discovery with a fixed port.
 
+![alt text](images/voting.png "Voting Overview")
+
 ## Booth
 This service takes votes for a particular candidate. The booth can validate the voter and candidate using the voting and candidate services.  It finds these services using the discovery service.
 
