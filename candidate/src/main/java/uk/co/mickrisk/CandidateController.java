@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -29,12 +30,32 @@ public class CandidateController {
 		return candidates;
 	}
 
-	@RequestMapping(value = "/candidate/{candidateName}", method = RequestMethod.POST)
+	@RequestMapping(value = "/candidate/{candidateName:.+}", method = RequestMethod.POST)
 	@ResponseBody
+	@Transactional
 	public String castVote(@PathVariable("candidateName") String candidateName) {
+		if(candidateRepository.findByCandidateName(candidateName) == null){
 		Candidate candidate = new Candidate(candidateName);
 		candidateRepository.save(candidate);
+		logger.info("Added:" + candidateName);
 		return "Added:" + candidateName;
+		}
+		
+		return "Can not add " + candidateName + ".  Candidate already exists";
+	}
+	
+	@RequestMapping(value = "/candidates", method = RequestMethod.DELETE)
+	@Transactional
+	public String deleteAll() {
+		candidateRepository.deleteAll();
+		return "Deleted all candidates";
+	}
+	
+	@RequestMapping(value = "/candidate/{candidateName}", method = RequestMethod.DELETE)
+	@Transactional
+	public String deleteCandidate(@PathVariable("candidateName") String candidateName) {
+		candidateRepository.deleteByCandidateName(candidateName);
+		return "Deleted:" + candidateName;
 	}
 
 }

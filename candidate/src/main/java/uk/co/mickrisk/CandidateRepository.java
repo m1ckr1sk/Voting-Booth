@@ -11,6 +11,8 @@ public interface CandidateRepository extends Repository<Candidate, Long>{
 	public Candidate findByCandidateName(String candidateName);
 	public List<Candidate> findAll();
 	public void save(Candidate candidate);
+	Long deleteByCandidateName(String candidateName);
+	Long deleteAll();
 		
 	@Query("SELECT count(*) from Candidate")
 	public int countCandidates();
