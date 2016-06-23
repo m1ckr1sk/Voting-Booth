@@ -43,7 +43,7 @@ end
 
 def add_candidate(candidate_name)
   puts "Addding #{candidate_name}"
-  uri = URI("http://#{@host}:#{@port}/candidate/#{candidate_name}")
+  uri = URI("http://#{@host}:#{@port}/candidateservice/candidate/#{candidate_name}")
   http = Net::HTTP.new(uri.host, uri.port)
 
   #Add the candidate
@@ -53,7 +53,7 @@ def add_candidate(candidate_name)
 end
 
 def check_candidate(expected_candidate)
-  uri = URI("http://#{@host}:#{@port}/candidates")
+  uri = URI("http://#{@host}:#{@port}/candidateservice/candidates")
   res = Net::HTTP.get(uri)
   candidates = JSON.parse res
   found_candidate = false
@@ -69,7 +69,7 @@ def check_candidate(expected_candidate)
 end
 
 def clear_all_candidates
-  uri = URI("http://#{@host}:#{@port}/candidates")
+  uri = URI("http://#{@host}:#{@port}/candidateservice/candidates")
   http = Net::HTTP.new(uri.host, uri.port)
 
   request = Net::HTTP::Delete.new(uri)
