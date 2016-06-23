@@ -5,7 +5,7 @@ require 'faker'
 
 Given(/^I have voter service$/) do
   puts "Contacting discovery:#{DISCOVERY_URL}/VOTING-VOTER"
-  uri = URI("#{DISCOVERY_URL}/eureka/apps")
+  uri = URI("#{DISCOVERY_URL}/eureka/apps/VOTING-VOTER")
   res = Net::HTTP.get(uri)
   doc = REXML::Document.new res
   root = doc.root
@@ -59,8 +59,9 @@ def check_voter(expected_voter)
   found_voter = false
   puts "LOOKING FOR:#{expected_voter}"
   voters.each  do |voter|
-    puts "MAYBE:#{voter["voterName"]}"
-    if expected_voter == voter["voterName"]
+    puts "MAYBE:#{voter}"
+    if expected_voter == voter["voterName"] 
+      expect(voter["hasVoted"]).to be_falsey
       found_voter = true
     end
   end

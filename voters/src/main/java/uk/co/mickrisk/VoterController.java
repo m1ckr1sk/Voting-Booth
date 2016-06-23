@@ -2,6 +2,8 @@ package uk.co.mickrisk;
 
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -27,7 +29,8 @@ public class VoterController {
 		return voters;
 	}
 
-	@RequestMapping(value = "/voter/{voterName}", method = RequestMethod.POST)
+	@RequestMapping(value = "/voter/{voterName:.+}", method = RequestMethod.POST)
+	@Transactional
 	public String castVote(@PathVariable("voterName") String voterName) {
 		Voter voter = new Voter(voterName);
 		voterRepository.save(voter);
@@ -48,6 +51,20 @@ public class VoterController {
 		voter.setHasVoted(true);
 		voterRepository.save(voter);
 		return "{\"message\":\"voter has regiestered a vote\"}";
+	}
+	
+	@RequestMapping(value = "/voters", method = RequestMethod.DELETE)
+	@Transactional
+	public String deleteAll() {
+		voterRepository.deleteAll();
+		return "Deleted all voters";
+	}
+	
+	@RequestMapping(value = "/voter/{voterName:.+}", method = RequestMethod.DELETE)
+	@Transactional
+	public String deleteCandidate(@PathVariable("voterName") String voterName) {
+		voterRepository.deleteByVoterName(voterName);
+		return "Deleted:" + voterName;
 	}
 
 }

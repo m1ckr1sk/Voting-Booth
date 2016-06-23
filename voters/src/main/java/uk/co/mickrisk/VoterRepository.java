@@ -14,5 +14,8 @@ public interface VoterRepository extends Repository<Voter, Long>{
 		
 	@Query("SELECT count(*) from Voter")
 	public int countVoters();
+	
+	public void deleteAll();
+	public void deleteByVoterName(String candidateName);
 
 }
