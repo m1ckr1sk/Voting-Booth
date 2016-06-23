@@ -53,7 +53,7 @@ public class VoterValidator {
 			return false;
 		}
 
-		ResponseEntity<List<Voter>> exchange = this.restTemplate.exchange(url + "/voters", HttpMethod.GET, null,
+		ResponseEntity<List<Voter>> exchange = this.restTemplate.exchange(url + "/voterservice/voters", HttpMethod.GET, null,
 				new ParameterizedTypeReference<List<Voter>>() {
 				}, (Object) "mstine");
 
@@ -80,7 +80,7 @@ public class VoterValidator {
 
 		HttpEntity<String> request = new HttpEntity<>(new String());
 		String response = 
-				  restTemplate.postForObject(url + "/voter/cast/" + voterId, request, String.class);
+				  restTemplate.postForObject(url + "/voterservice/voter/cast/" + voterId, request, String.class);
 
 		logger.info(response);
 		

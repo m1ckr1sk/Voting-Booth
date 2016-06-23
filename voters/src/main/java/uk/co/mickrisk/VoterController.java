@@ -28,6 +28,12 @@ public class VoterController {
 		List<Voter> voters = voterRepository.findAll();
 		return voters;
 	}
+	
+	@RequestMapping(value = "/voter/{voterName:.+}", method = RequestMethod.GET)
+	public Voter getVoter(@PathVariable("voterName") String voterName) {
+		Voter voter = voterRepository.findByVoterName(voterName);
+		return voter;
+	}
 
 	@RequestMapping(value = "/voter/{voterName:.+}", method = RequestMethod.POST)
 	@Transactional

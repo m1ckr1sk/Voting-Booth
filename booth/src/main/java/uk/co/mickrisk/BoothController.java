@@ -50,7 +50,6 @@ public class BoothController {
 		voteRepository.save(vote);
 		
 		return "{\"message\":\"vote successfully cast\"}";
-
 	}
 	
 	@RequestMapping(value = "/close", method = RequestMethod.GET)

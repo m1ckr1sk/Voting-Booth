@@ -5,19 +5,19 @@ require 'faker'
 
 Given(/^I have candidate service$/) do
   puts "Contacting discovery:#{DISCOVERY_URL}/VOTING-CANDIDATE"
-  uri = URI("#{DISCOVERY_URL}/eureka/apps")
+  uri = URI("#{DISCOVERY_URL}/eureka/apps/VOTING-CANDIDATE")
   res = Net::HTTP.get(uri)
   doc = REXML::Document.new res
   root = doc.root
   #puts docs
-  @host =  doc.elements["//instance/hostName"].text
-  @port = doc.elements["//instance/port"].text
+  @candidate_host =  doc.elements["//instance/hostName"].text
+  @candidate_port = doc.elements["//instance/port"].text
 
   clear_all_candidates()
 end
 
 When(/^I add candidate "([^"]*)"$/) do |candidate_name|
-  add_candidate(URI::encode(candidate_name, /\W/))
+  add_candidate(candidate_name)
 end
 
 Then(/^candidate "([^"]*)" must be eligible for the vote$/) do |expected_candidate|
@@ -43,7 +43,7 @@ end
 
 def add_candidate(candidate_name)
   puts "Addding #{candidate_name}"
-  uri = URI("http://#{@host}:#{@port}/candidateservice/candidate/#{candidate_name}")
+  uri = URI("http://#{@candidate_host}:#{@candidate_port}/candidateservice/candidate/#{URI::encode(candidate_name, /\W/)}")
   http = Net::HTTP.new(uri.host, uri.port)
 
   #Add the candidate
@@ -52,8 +52,15 @@ def add_candidate(candidate_name)
   expect(res.code).to eq('200')
 end
 
+def get_candidate(candidate_name)
+  uri = URI("http://#{@candidate_host}:#{@candidate_port}/candidateservice/candidate/#{URI::encode(candidate_name, /\W/)}")
+  res = Net::HTTP.get(uri)
+  candidate = JSON.parse res
+  return candidate
+end
+
 def check_candidate(expected_candidate)
-  uri = URI("http://#{@host}:#{@port}/candidateservice/candidates")
+  uri = URI("http://#{@candidate_host}:#{@candidate_port}/candidateservice/candidates")
   res = Net::HTTP.get(uri)
   candidates = JSON.parse res
   found_candidate = false
@@ -69,7 +76,7 @@ def check_candidate(expected_candidate)
 end
 
 def clear_all_candidates
-  uri = URI("http://#{@host}:#{@port}/candidateservice/candidates")
+  uri = URI("http://#{@candidate_host}:#{@candidate_port}/candidateservice/candidates")
   http = Net::HTTP.new(uri.host, uri.port)
 
   request = Net::HTTP::Delete.new(uri)

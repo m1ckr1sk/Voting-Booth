@@ -29,11 +29,17 @@ public class CandidateController {
 		List<Candidate> candidates = candidateRepository.findAll();
 		return candidates;
 	}
+	
+	@RequestMapping(value = "/candidate/{candidateName:.+}",method=RequestMethod.GET)
+	public Candidate getCandidate(@PathVariable("candidateName") String candidateName) {
+		Candidate candidate = candidateRepository.findByCandidateName(candidateName);
+		return candidate;
+	}
 
 	@RequestMapping(value = "/candidate/{candidateName:.+}", method = RequestMethod.POST)
 	@ResponseBody
 	@Transactional
-	public String castVote(@PathVariable("candidateName") String candidateName) {
+	public String addCandidate(@PathVariable("candidateName") String candidateName) {
 		if(candidateRepository.findByCandidateName(candidateName) == null){
 		Candidate candidate = new Candidate(candidateName);
 		candidateRepository.save(candidate);

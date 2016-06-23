@@ -10,14 +10,14 @@ Given(/^I have voter service$/) do
   doc = REXML::Document.new res
   root = doc.root
   #puts docs
-  @host =  doc.elements["//instance/hostName"].text
-  @port = doc.elements["//instance/port"].text
+  @voter_host =  doc.elements["//instance/hostName"].text
+  @voter_port = doc.elements["//instance/port"].text
 
   clear_all_voters()
 end
 
 When(/^I add voter "([^"]*)"$/) do |voter_name|
-  add_voter(URI::encode(voter_name, /\W/))
+  add_voter(voter_name)
 end
 
 Then(/^voter "([^"]*)" must be eligible to vote$/) do |expected_voter|
@@ -31,7 +31,7 @@ When(/^I add "([^"]*)" voter names$/) do |number_of_names_to_add|
   end
 
   @names.each do |name|
-    add_voter(URI::encode(name, /\W/))
+    add_voter(name)
   end
 end
 
@@ -43,7 +43,7 @@ end
 
 def add_voter(voter_name)
   puts "Addding #{voter_name}"
-  uri = URI("http://#{@host}:#{@port}/voterservice/voter/#{voter_name}")
+  uri = URI("http://#{@voter_host}:#{@voter_port}/voterservice/voter/#{URI::encode(voter_name, /\W/)}")
   http = Net::HTTP.new(uri.host, uri.port)
 
   #Add the candidate
@@ -53,7 +53,7 @@ def add_voter(voter_name)
 end
 
 def check_voter(expected_voter)
-  uri = URI("http://#{@host}:#{@port}/voterservice/voters")
+  uri = URI("http://#{@voter_host}:#{@voter_port}/voterservice/voters")
   res = Net::HTTP.get(uri)
   voters = JSON.parse res
   found_voter = false
@@ -69,8 +69,15 @@ def check_voter(expected_voter)
   expect(found_voter).to be_truthy
 end
 
+def get_voter(voter_name)
+  uri = URI("http://#{@voter_host}:#{@voter_port}/voterservice/voter/#{URI::encode(voter_name, /\W/)}")
+  res = Net::HTTP.get(uri)
+  voter = JSON.parse res
+  return voter
+end
+
 def clear_all_voters
-  uri = URI("http://#{@host}:#{@port}/voterservice/voters")
+  uri = URI("http://#{@voter_host}:#{@voter_port}/voterservice/voters")
   http = Net::HTTP.new(uri.host, uri.port)
 
   request = Net::HTTP::Delete.new(uri)

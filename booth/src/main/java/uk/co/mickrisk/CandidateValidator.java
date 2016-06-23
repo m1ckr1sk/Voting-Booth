@@ -57,7 +57,7 @@ public class CandidateValidator {
 		
 		ResponseEntity<List<Candidate>> exchange =
                 this.restTemplate.exchange(
-                		url + "/candidates",
+                		url + "/candidateservice/candidates",
                         HttpMethod.GET,
                         null,
                         new ParameterizedTypeReference<List<Candidate>>() {
