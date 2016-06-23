@@ -2,6 +2,7 @@ package uk.co.mickrisk;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,6 +22,9 @@ public class BoothController {
 
 	private CandidateValidator candidateValidator;
 	private VoterValidator voterValidator;
+	
+	@Value("${booth.booth_identifier}")
+	String boothIdentifier;
 
 	@Autowired
 	public BoothController(VoteRepository voteRepository, 
@@ -54,7 +58,7 @@ public class BoothController {
 	
 	@RequestMapping(value = "/close", method = RequestMethod.GET)
 	public String closeBooth() throws NumberFormatException, JsonProcessingException {
-		VoteCollection voteCollection = new VoteCollection(new Long("2"));
+		VoteCollection voteCollection = new VoteCollection(new Long(boothIdentifier));
 		voteCollection.setVotes(voteRepository.findAll());
 		return mapper.writeValueAsString(voteCollection);
 	}

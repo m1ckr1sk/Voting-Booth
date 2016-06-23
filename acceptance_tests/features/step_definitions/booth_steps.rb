@@ -16,7 +16,8 @@ end
 
 Then(/^the voter "([^"]*)" must have registered a vote$/) do |voter_name|
   voter = get_voter(voter_name)
-    expect(voter["hasVoted"]).to be_truthy
+  expect(voter["hasVoted"]).to be_truthy
+  close_booth()
 end
   
 def cast_vote(candidate_name, voter_name)
@@ -32,5 +33,12 @@ def cast_vote(candidate_name, voter_name)
   request.body = voter.to_json
   res = http.request(request)
   expect(res.code).to eq('200')
+end
 
+def close_booth
+  uri = URI("http://#{@booth_host}:#{@booth_port}/boothservice/close")
+   res = Net::HTTP.get(uri)
+   votes = JSON.parse res
+   puts votes
+   return votes
 end
