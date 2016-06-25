@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: uk.co.mickrisk.CandidateApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 51.148 sec - in uk.co.mickrisk.CandidateApplicationTests
