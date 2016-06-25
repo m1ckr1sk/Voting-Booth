@@ -17,3 +17,5 @@ mvn clean package
 cd ..
 cd booth
 mvn clean package
+
+cd ..

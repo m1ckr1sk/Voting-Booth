@@ -1,4 +1,7 @@
 # Voting Booth
+
+[![CircleCI](https://circleci.com/gh/m1ckr1sk/voting_booth.svg?style=svg)](https://circleci.com/gh/m1ckr1sk/voting_booth)
+
 An service to provide a system to count votes from multiple voting booths for multiple candidates.  The service must offer management of the voting and provide some resilience, confidence in the result and allow for distributed operation. 
 
 The services are currently spring boot rest services. It uses the Eureka service discovery with a fixed port.
