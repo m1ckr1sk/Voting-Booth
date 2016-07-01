@@ -19,3 +19,9 @@ This service manages the voters that are elegible to vote and records when they 
 
 ## Discovery
 The discovery service used for service registration.  Crucially, this allows the booth to find the candidate and voter services.
+
+You can access the swagger docs using
+
+`
+http://localhost:8077/candidateservice/swagger-ui.html
+`

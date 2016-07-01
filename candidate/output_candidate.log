@@ -1,0 +1,163 @@
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building candidate 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] >>> spring-boot-maven-plugin:1.3.5.RELEASE:run (default-cli) > test-compile @ candidate >>>
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ candidate ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ candidate ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ candidate ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Users\Mike\git\voting_booth\candidate\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ candidate ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] <<< spring-boot-maven-plugin:1.3.5.RELEASE:run (default-cli) < test-compile @ candidate <<<
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:1.3.5.RELEASE:run (default-cli) @ candidate ---
+2016-06-29 16:15:02.418  INFO 4832 --- [           main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@a6f8e6c: startup date [Wed Jun 29 16:15:02 BST 2016]; root of context hierarchy
+2016-06-29 16:15:03.027  INFO 4832 --- [           main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-06-29 16:15:03.402  INFO 4832 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'configurationPropertiesRebinderAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$db63b7c7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-06-29 16:15:06.202  INFO 4832 --- [           main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+               
+               /\/\ (_) ___| | __ /__(_)___| | __               
+              /    \| |/ __| |/ // \// / __| |/ /               
+             / /\/\ \ | (__|   </ _  \ \__ \   <                
+             \/    \/_|\___|_|\_\/ \_/_|___/_|\_\               
+                                                                
+               ___                          _                   
+              / _ \_ __ ___  ___  ___ _ __ | |_ ___             
+             / /_)/ '__/ _ \/ __|/ _ \ '_ \| __/ __|            
+            / ___/| | |  __/\__ \  __/ | | | |_\__ \            
+            \/    |_|  \___||___/\___|_| |_|\__|___/            
+                                                                
+       ___                _ _     _       _            
+      / __\__ _ _ __   __| (_) __| | __ _| |_ ___  ___ 
+     / /  / _` | '_ \ / _` | |/ _` |/ _` | __/ _ \/ __|
+    / /__| (_| | | | | (_| | | (_| | (_| | ||  __/\__ \
+    \____/\__,_|_| |_|\__,_|_|\__,_|\__,_|\__\___||___/
+                                                       
+2016-06-29 16:15:06.483  INFO 4832 --- [           main] uk.co.mickrisk.CandidateApplication      : No active profile set, falling back to default profiles: default
+2016-06-29 16:15:06.530  INFO 4832 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6c170b69: startup date [Wed Jun 29 16:15:06 BST 2016]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@a6f8e6c
+2016-06-29 16:15:15.774  WARN 4832 --- [           main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2016-06-29 16:15:16.415  INFO 4832 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=418f7685-17df-329d-bd88-a755c5036a02
+2016-06-29 16:15:16.602  INFO 4832 --- [           main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-06-29 16:15:17.883  INFO 4832 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$bf49b4ca] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-06-29 16:15:17.976  INFO 4832 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$db63b7c7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-06-29 16:15:17.992  INFO 4832 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.RefreshEndpointAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.RefreshEndpointAutoConfiguration$$EnhancerBySpringCGLIB$$84c2b9bd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-06-29 16:15:18.913  INFO 4832 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8077 (http)
+2016-06-29 16:15:19.023  INFO 4832 --- [           main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-06-29 16:15:19.023  INFO 4832 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.0.33
+2016-06-29 16:15:21.178  INFO 4832 --- [ost-startStop-1] o.a.c.c.C.[.[.[/candidateservice]        : Initializing Spring embedded WebApplicationContext
+2016-06-29 16:15:21.178  INFO 4832 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 14648 ms
+2016-06-29 16:15:27.908  INFO 4832 --- [ost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'dispatcherServlet' to [/]
+2016-06-29 16:15:27.908  INFO 4832 --- [ost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'webServlet' to [/h2-console/*]
+2016-06-29 16:15:27.924  INFO 4832 --- [ost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'metricFilter' to: [/*]
+2016-06-29 16:15:27.924  INFO 4832 --- [ost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-06-29 16:15:27.924  INFO 4832 --- [ost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-06-29 16:15:27.940  INFO 4832 --- [ost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-06-29 16:15:27.940  INFO 4832 --- [ost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'requestContextFilter' to: [/*]
+2016-06-29 16:15:27.940  INFO 4832 --- [ost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2016-06-29 16:15:27.940  INFO 4832 --- [ost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2016-06-29 16:15:30.782  INFO 4832 --- [           main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-06-29 16:15:30.813  INFO 4832 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-06-29 16:15:30.938  INFO 4832 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate Core {4.3.11.Final}
+2016-06-29 16:15:30.938  INFO 4832 --- [           main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2016-06-29 16:15:30.938  INFO 4832 --- [           main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2016-06-29 16:15:31.329  INFO 4832 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-06-29 16:15:31.516  INFO 4832 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-06-29 16:15:31.672  INFO 4832 --- [           main] o.h.h.i.ast.ASTQueryTranslatorFactory    : HHH000397: Using ASTQueryTranslatorFactory
+2016-06-29 16:15:32.375  INFO 4832 --- [           main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2016-06-29 16:15:32.391  INFO 4832 --- [           main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2016-06-29 16:15:34.469  INFO 4832 --- [           main] uk.co.mickrisk.CandidateController       : CandidateRepository says system has 0 candidates
+2016-06-29 16:15:37.098  INFO 4832 --- [           main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2016-06-29 16:15:40.254  INFO 4832 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6c170b69: startup date [Wed Jun 29 16:15:06 BST 2016]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@a6f8e6c
+2016-06-29 16:15:40.426  INFO 4832 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/candidates],methods=[GET]}" onto public java.util.List<uk.co.mickrisk.Candidate> uk.co.mickrisk.CandidateController.getCandidates()
+2016-06-29 16:15:40.426  INFO 4832 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/candidates],methods=[DELETE]}" onto public java.lang.String uk.co.mickrisk.CandidateController.deleteAll()
+2016-06-29 16:15:40.426  INFO 4832 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/candidate/{candidateName:.+}],methods=[GET]}" onto public uk.co.mickrisk.Candidate uk.co.mickrisk.CandidateController.getCandidate(java.lang.String)
+2016-06-29 16:15:40.426  INFO 4832 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/candidate/{candidateName:.+}],methods=[POST]}" onto public java.lang.String uk.co.mickrisk.CandidateController.addCandidate(java.lang.String)
+2016-06-29 16:15:40.426  INFO 4832 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/candidate/{candidateName}],methods=[DELETE]}" onto public java.lang.String uk.co.mickrisk.CandidateController.deleteCandidate(java.lang.String)
+2016-06-29 16:15:40.426  INFO 4832 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-06-29 16:15:40.426  INFO 4832 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-06-29 16:15:40.972  INFO 4832 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-06-29 16:15:40.972  INFO 4832 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-06-29 16:15:41.097  INFO 4832 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-06-29 16:15:45.534  INFO 4832 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.context.environment.EnvironmentManagerMvcEndpoint.value(java.util.Map<java.lang.String, java.lang.String>)
+2016-06-29 16:15:45.534  INFO 4832 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/reset],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> org.springframework.cloud.context.environment.EnvironmentManagerMvcEndpoint.reset()
+2016-06-29 16:15:45.534  INFO 4832 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-06-29 16:15:45.534  INFO 4832 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/features || /features.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-06-29 16:15:45.534  INFO 4832 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/shutdown || /shutdown.json],methods=[POST]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.ShutdownMvcEndpoint.invoke()
+2016-06-29 16:15:45.549  INFO 4832 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-06-29 16:15:45.549  INFO 4832 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info || /info.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-06-29 16:15:45.549  INFO 4832 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-06-29 16:15:45.565  INFO 4832 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/pause || /pause.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke()
+2016-06-29 16:15:45.565  INFO 4832 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-06-29 16:15:45.565  INFO 4832 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-06-29 16:15:45.565  INFO 4832 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health || /health.json],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
+2016-06-29 16:15:45.565  INFO 4832 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/archaius || /archaius.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-06-29 16:15:45.565  INFO 4832 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/refresh || /refresh.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke()
+2016-06-29 16:15:45.565  INFO 4832 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-06-29 16:15:45.581  INFO 4832 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2016-06-29 16:15:45.581  INFO 4832 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-06-29 16:15:46.002  INFO 4832 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/restart || /restart.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.context.restart.RestartMvcEndpoint.invoke()
+2016-06-29 16:15:46.002  INFO 4832 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2016-06-29 16:15:46.002  INFO 4832 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env || /env.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-06-29 16:15:46.002  INFO 4832 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/resume || /resume.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke()
+2016-06-29 16:15:46.580  WARN 4832 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2016-06-29 16:15:46.580  INFO 4832 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2016-06-29 16:15:46.580  WARN 4832 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2016-06-29 16:15:46.596  INFO 4832 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2016-06-29 16:15:47.564  INFO 4832 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-06-29 16:15:47.595  INFO 4832 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'refreshScope' has been autodetected for JMX exposure
+2016-06-29 16:15:47.595  INFO 4832 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'environmentManager' has been autodetected for JMX exposure
+2016-06-29 16:15:47.595  INFO 4832 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
+2016-06-29 16:15:47.595  INFO 4832 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'refreshEndpoint' has been autodetected for JMX exposure
+2016-06-29 16:15:47.595  INFO 4832 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'restartEndpoint' has been autodetected for JMX exposure
+2016-06-29 16:15:47.611  INFO 4832 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
+2016-06-29 16:15:47.658  INFO 4832 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'restartEndpoint': registering with JMX server as MBean [org.springframework.cloud.context.restart:name=restartEndpoint,type=RestartEndpoint]
+2016-06-29 16:15:47.705  INFO 4832 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
+2016-06-29 16:15:48.641  INFO 4832 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=6c170b69,type=ConfigurationPropertiesRebinder]
+2016-06-29 16:15:48.657  INFO 4832 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'refreshEndpoint': registering with JMX server as MBean [org.springframework.cloud.endpoint:name=refreshEndpoint,type=RefreshEndpoint]
+2016-06-29 16:15:49.375  INFO 4832 --- [           main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2016-06-29 16:15:49.391  INFO 4832 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2016-06-29 16:15:50.047  INFO 4832 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2016-06-29 16:15:50.047  INFO 4832 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2016-06-29 16:15:50.250  INFO 4832 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2016-06-29 16:15:50.250  INFO 4832 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2016-06-29 16:15:50.671  INFO 4832 --- [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-06-29 16:15:51.483  INFO 4832 --- [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2016-06-29 16:15:51.483  INFO 4832 --- [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2016-06-29 16:15:51.483  INFO 4832 --- [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2016-06-29 16:15:51.483  INFO 4832 --- [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2016-06-29 16:15:51.483  INFO 4832 --- [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2016-06-29 16:15:51.483  INFO 4832 --- [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2016-06-29 16:15:51.483  INFO 4832 --- [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2016-06-29 16:15:51.967  INFO 4832 --- [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2016-06-29 16:15:51.967  INFO 4832 --- [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2016-06-29 16:15:51.967  INFO 4832 --- [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2016-06-29 16:15:52.217  INFO 4832 --- [           main] c.n.e.EurekaDiscoveryClientConfiguration : Registering application voting-candidate with eureka with status UP
+2016-06-29 16:15:52.217  INFO 4832 --- [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1467213352217, current=UP, previous=STARTING]
+2016-06-29 16:15:52.857  INFO 4832 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8077 (http)
+2016-06-29 16:15:52.857  INFO 4832 --- [           main] c.n.e.EurekaDiscoveryClientConfiguration : Updating port to 8077
+2016-06-29 16:15:52.873  INFO 4832 --- [           main] uk.co.mickrisk.CandidateApplication      : Started CandidateApplication in 53.344 seconds (JVM running for 69.513)
+2016-06-29 16:15:52.873  INFO 4832 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_VOTING-CANDIDATE/localhost:voting-candidate:8077: registering service...
+2016-06-29 16:15:53.216  INFO 4832 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_VOTING-CANDIDATE/localhost:voting-candidate:8077 - registration status: 204
+2016-06-29 16:16:21.962  INFO 4832 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2016-06-29 16:16:21.963  INFO 4832 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2016-06-29 16:16:21.963  INFO 4832 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2016-06-29 16:16:21.964  INFO 4832 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2016-06-29 16:16:21.964  INFO 4832 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2016-06-29 16:16:21.964  INFO 4832 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2016-06-29 16:16:21.964  INFO 4832 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2016-06-29 16:16:22.039  INFO 4832 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200

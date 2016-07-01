@@ -1,0 +1,19 @@
+[INFO] Scanning for projects...
+Downloading: http://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-metadata.xml
+Downloading: http://repo.maven.apache.org/maven2/org/codehaus/mojo/maven-metadata.xml
+4/20 KB   8/20 KB   12/20 KB   16/20 KB   20/20 KB   20/20 KB   4/13 KB   20/20 KB   8/13 KB   20/20 KB   12/13 KB   20/20 KB   13/13 KB   20/20 KB                         Downloaded: http://repo.maven.apache.org/maven2/org/codehaus/mojo/maven-metadata.xml (20 KB at 100.0 KB/sec)
+                      Downloaded: http://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-metadata.xml (13 KB at 39.8 KB/sec)
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 3.860 s
+[INFO] Finished at: 2016-06-25T09:04:41+01:00
+[INFO] Final Memory: 10M/54M
+[INFO] ------------------------------------------------------------------------
+[ERROR] No plugin found for prefix 'spring-boot' in the current project and in the plugin groups [org.apache.maven.plugins, org.codehaus.mojo] available from the repositories [local (C:\Users\Mike\.m2\repository), central (http://repo.maven.apache.org/maven2)] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/NoPluginFoundForPrefixException
