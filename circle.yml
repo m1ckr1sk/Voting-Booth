@@ -5,6 +5,7 @@ machine:
 test:
   override:
     - sh ./build_all.sh
+    - sh ./run_candidate.sh
   post:
     - mkdir -p $CIRCLE_TEST_REPORTS/junit/
     - mkdir -p $CIRCLE_TEST_REPORTS/cucumber/
