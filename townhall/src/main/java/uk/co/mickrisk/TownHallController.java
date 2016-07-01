@@ -1,5 +1,7 @@
 package uk.co.mickrisk;
 
+import java.util.List;
+
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
@@ -19,11 +21,13 @@ public class TownHallController {
 	protected ObjectMapper mapper = new ObjectMapper();
 	protected BoothRepository boothRepository;
 	protected VoteCloser voteCloser;
+	protected VoteRepository voteRepository;
 
 	@Autowired
-	public TownHallController(BoothRepository boothRepository, VoteCloser voteCloser) {
+	public TownHallController(BoothRepository boothRepository, VoteCloser voteCloser, VoteRepository voteRepository) {
 		this.boothRepository = boothRepository;
 		this.voteCloser = voteCloser;
+		this.voteRepository = voteRepository;
 	}
 
 	@RequestMapping(value = "/register/{boothId}", method = RequestMethod.POST)
@@ -54,11 +58,27 @@ public class TownHallController {
 		return "{\"message\":\"booth "+boothId+" not found\"}";
 	}
 	
-	@RequestMapping(value = "/close", method = RequestMethod.POST)
+	@RequestMapping(value = "/close", method = RequestMethod.PUT)
 	public String closeVote() throws InterruptedException {
 
-		voteCloser.closeVote();
+		List<Vote> allVotes = voteCloser.closeVote();
+		for(Vote vote :allVotes){
+			voteRepository.save(vote);
+		}
 		return "{\"message\":\"closing vote\"}";
+	}
+	
+	@RequestMapping(value = "/result", method = RequestMethod.GET)
+	public List<Object[]> countVotes() throws InterruptedException {
+
+		return voteRepository.getResults();
+	}
+	
+	@RequestMapping(value = "/reset", method = RequestMethod.DELETE)
+	@Transactional
+	public String deleteVotes(){
+		voteRepository.deleteAll();
+		return "Deleted all votes";
 	}
 
 }

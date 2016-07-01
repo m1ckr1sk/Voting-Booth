@@ -9,6 +9,7 @@ public interface VoteRepository extends Repository<Vote, Long>{
 	
 	public void save(Vote vote);
 	public List<Vote> findAll();
+	public Long deleteAll();
 	
 	@Query("SELECT count(*) from Vote")
 	public int countVotes();

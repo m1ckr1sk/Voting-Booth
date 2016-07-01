@@ -8,6 +8,8 @@ Given(/^I have voting booth service$/) do
   root = doc.root
   @booth_host =  doc.elements["//instance/hostName"].text
   @booth_port = doc.elements["//instance/port"].text
+
+  clear_all_booth_votes
 end
 
 When(/^I cast a vote from "([^"]*)" for "([^"]*)"$/) do |voter_name, candidate_name|
@@ -19,7 +21,7 @@ Then(/^the voter "([^"]*)" must have registered a vote$/) do |voter_name|
   expect(voter["hasVoted"]).to be_truthy
   close_booth()
 end
-  
+
 def cast_vote(candidate_name, voter_name)
   voter = get_voter(voter_name)
   candidate = get_candidate(candidate_name)
@@ -37,8 +39,16 @@ end
 
 def close_booth
   uri = URI("http://#{@booth_host}:#{@booth_port}/boothservice/close")
-   res = Net::HTTP.get(uri)
-   votes = JSON.parse res
-   puts votes
-   return votes
+  res = Net::HTTP.get(uri)
+  votes = JSON.parse res
+  puts votes
+  return votes
+end
+
+def clear_all_booth_votes
+  uri = URI("http://#{@booth_host}:#{@booth_port}/boothservice/reset")
+  http = Net::HTTP.new(uri.host, uri.port)
+
+  request = Net::HTTP::Delete.new(uri)
+  res = http.request(request)
 end

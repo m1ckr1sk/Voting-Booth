@@ -49,17 +49,20 @@ public class VoteCloser {
 		return boothUrls;
 	}
 	
-	public void closeVote() throws InterruptedException{
+	public List<Vote> closeVote() throws InterruptedException{
+		List<Vote> allVotes = new ArrayList<Vote>();
 		List<String> boothUrls = getBoothUrls();
 		for(String boothUrl : boothUrls){
-			
-			VoteCollection message = this.restTemplate.getForObject(boothUrl + "/close", VoteCollection.class);
+			logger.info("Contacting Booth: " + boothUrl + "/boothservice/close");
+			VoteCollection message = this.restTemplate.getForObject(boothUrl + "/boothservice/close", VoteCollection.class);
 			logger.info("Booth: " + message.getBoothId());
 			
 			List<Vote> votes = message.getVotes();
 			for(Vote vote : votes){
 				logger.info("VoteID: " + vote.getVoteId() + " for candidate:" + vote.getCandidateId());
+				allVotes.add(vote);
 			}
 		}
+		return allVotes;
 	}
 }

@@ -24,10 +24,10 @@
 [INFO] <<< spring-boot-maven-plugin:1.3.5.RELEASE:run (default-cli) < test-compile @ candidate <<<
 [INFO] 
 [INFO] --- spring-boot-maven-plugin:1.3.5.RELEASE:run (default-cli) @ candidate ---
-2016-06-29 16:15:02.418  INFO 4832 --- [           main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@a6f8e6c: startup date [Wed Jun 29 16:15:02 BST 2016]; root of context hierarchy
-2016-06-29 16:15:03.027  INFO 4832 --- [           main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
-2016-06-29 16:15:03.402  INFO 4832 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'configurationPropertiesRebinderAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$db63b7c7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2016-06-29 16:15:06.202  INFO 4832 --- [           main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2016-07-01 16:14:13.359  INFO 2904 --- [           main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@351f5ee5: startup date [Fri Jul 01 16:14:13 BST 2016]; root of context hierarchy
+2016-07-01 16:14:13.765  INFO 2904 --- [           main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-07-01 16:14:13.843  INFO 2904 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'configurationPropertiesRebinderAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$d289a3f8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-07-01 16:14:16.155  INFO 2904 --- [           main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
                
                /\/\ (_) ___| | __ /__(_)___| | __               
               /    \| |/ __| |/ // \// / __| |/ /               
@@ -46,118 +46,769 @@
     / /__| (_| | | | | (_| | | (_| | (_| | ||  __/\__ \
     \____/\__,_|_| |_|\__,_|_|\__,_|\__,_|\__\___||___/
                                                        
-2016-06-29 16:15:06.483  INFO 4832 --- [           main] uk.co.mickrisk.CandidateApplication      : No active profile set, falling back to default profiles: default
-2016-06-29 16:15:06.530  INFO 4832 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6c170b69: startup date [Wed Jun 29 16:15:06 BST 2016]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@a6f8e6c
-2016-06-29 16:15:15.774  WARN 4832 --- [           main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
-2016-06-29 16:15:16.415  INFO 4832 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=418f7685-17df-329d-bd88-a755c5036a02
-2016-06-29 16:15:16.602  INFO 4832 --- [           main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
-2016-06-29 16:15:17.883  INFO 4832 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$bf49b4ca] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2016-06-29 16:15:17.976  INFO 4832 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$db63b7c7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2016-06-29 16:15:17.992  INFO 4832 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.RefreshEndpointAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.RefreshEndpointAutoConfiguration$$EnhancerBySpringCGLIB$$84c2b9bd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2016-06-29 16:15:18.913  INFO 4832 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8077 (http)
-2016-06-29 16:15:19.023  INFO 4832 --- [           main] o.apache.catalina.core.StandardService   : Starting service Tomcat
-2016-06-29 16:15:19.023  INFO 4832 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.0.33
-2016-06-29 16:15:21.178  INFO 4832 --- [ost-startStop-1] o.a.c.c.C.[.[.[/candidateservice]        : Initializing Spring embedded WebApplicationContext
-2016-06-29 16:15:21.178  INFO 4832 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 14648 ms
-2016-06-29 16:15:27.908  INFO 4832 --- [ost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'dispatcherServlet' to [/]
-2016-06-29 16:15:27.908  INFO 4832 --- [ost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'webServlet' to [/h2-console/*]
-2016-06-29 16:15:27.924  INFO 4832 --- [ost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'metricFilter' to: [/*]
-2016-06-29 16:15:27.924  INFO 4832 --- [ost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'characterEncodingFilter' to: [/*]
-2016-06-29 16:15:27.924  INFO 4832 --- [ost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2016-06-29 16:15:27.940  INFO 4832 --- [ost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2016-06-29 16:15:27.940  INFO 4832 --- [ost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'requestContextFilter' to: [/*]
-2016-06-29 16:15:27.940  INFO 4832 --- [ost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'webRequestLoggingFilter' to: [/*]
-2016-06-29 16:15:27.940  INFO 4832 --- [ost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'applicationContextIdFilter' to: [/*]
-2016-06-29 16:15:30.782  INFO 4832 --- [           main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
-2016-06-29 16:15:30.813  INFO 4832 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+2016-07-01 16:14:16.702  INFO 2904 --- [           main] uk.co.mickrisk.CandidateApplication      : No active profile set, falling back to default profiles: default
+2016-07-01 16:14:16.749  INFO 2904 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@657c742d: startup date [Fri Jul 01 16:14:16 BST 2016]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@351f5ee5
+2016-07-01 16:14:31.017  INFO 2904 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'managementServletContext' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.actuate.autoconfigure.EndpointWebMvcHypermediaManagementContextConfiguration; factoryMethodName=managementServletContext; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/actuate/autoconfigure/EndpointWebMvcHypermediaManagementContextConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.actuate.autoconfigure.EndpointWebMvcAutoConfiguration; factoryMethodName=managementServletContext; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/actuate/autoconfigure/EndpointWebMvcAutoConfiguration.class]]
+2016-07-01 16:14:31.673  WARN 2904 --- [           main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2016-07-01 16:14:32.704  INFO 2904 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=688fe7ed-46ed-3668-aa35-2cd6e7663976
+2016-07-01 16:14:32.970  INFO 2904 --- [           main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-07-01 16:14:34.048  INFO 2904 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b66fa0fb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-07-01 16:14:34.595  INFO 2904 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$d289a3f8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-07-01 16:14:34.626  INFO 2904 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.RefreshEndpointAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.RefreshEndpointAutoConfiguration$$EnhancerBySpringCGLIB$$7be8a5ee] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-07-01 16:14:38.017  INFO 2904 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8077 (http)
+2016-07-01 16:14:40.267  INFO 2904 --- [           main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-07-01 16:14:40.267  INFO 2904 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.0.33
+2016-07-01 16:14:40.955  INFO 2904 --- [ost-startStop-1] o.a.c.c.C.[.[.[/candidateservice]        : Initializing Spring embedded WebApplicationContext
+2016-07-01 16:14:40.955  INFO 2904 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 24206 ms
+2016-07-01 16:14:48.477  INFO 2904 --- [ost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'dispatcherServlet' to [/]
+2016-07-01 16:14:48.493  INFO 2904 --- [ost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'webServlet' to [/h2-console/*]
+2016-07-01 16:14:48.493  INFO 2904 --- [ost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'metricFilter' to: [/*]
+2016-07-01 16:14:48.493  INFO 2904 --- [ost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-07-01 16:14:48.493  INFO 2904 --- [ost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-07-01 16:14:48.493  INFO 2904 --- [ost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-07-01 16:14:48.493  INFO 2904 --- [ost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'requestContextFilter' to: [/*]
+2016-07-01 16:14:48.493  INFO 2904 --- [ost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2016-07-01 16:14:48.493  INFO 2904 --- [ost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2016-07-01 16:14:50.711  INFO 2904 --- [           main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-07-01 16:14:50.743  INFO 2904 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2016-06-29 16:15:30.938  INFO 4832 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate Core {4.3.11.Final}
-2016-06-29 16:15:30.938  INFO 4832 --- [           main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
-2016-06-29 16:15:30.938  INFO 4832 --- [           main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
-2016-06-29 16:15:31.329  INFO 4832 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
-2016-06-29 16:15:31.516  INFO 4832 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2016-06-29 16:15:31.672  INFO 4832 --- [           main] o.h.h.i.ast.ASTQueryTranslatorFactory    : HHH000397: Using ASTQueryTranslatorFactory
-2016-06-29 16:15:32.375  INFO 4832 --- [           main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
-2016-06-29 16:15:32.391  INFO 4832 --- [           main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
-2016-06-29 16:15:34.469  INFO 4832 --- [           main] uk.co.mickrisk.CandidateController       : CandidateRepository says system has 0 candidates
-2016-06-29 16:15:37.098  INFO 4832 --- [           main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
-2016-06-29 16:15:40.254  INFO 4832 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6c170b69: startup date [Wed Jun 29 16:15:06 BST 2016]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@a6f8e6c
-2016-06-29 16:15:40.426  INFO 4832 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/candidates],methods=[GET]}" onto public java.util.List<uk.co.mickrisk.Candidate> uk.co.mickrisk.CandidateController.getCandidates()
-2016-06-29 16:15:40.426  INFO 4832 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/candidates],methods=[DELETE]}" onto public java.lang.String uk.co.mickrisk.CandidateController.deleteAll()
-2016-06-29 16:15:40.426  INFO 4832 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/candidate/{candidateName:.+}],methods=[GET]}" onto public uk.co.mickrisk.Candidate uk.co.mickrisk.CandidateController.getCandidate(java.lang.String)
-2016-06-29 16:15:40.426  INFO 4832 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/candidate/{candidateName:.+}],methods=[POST]}" onto public java.lang.String uk.co.mickrisk.CandidateController.addCandidate(java.lang.String)
-2016-06-29 16:15:40.426  INFO 4832 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/candidate/{candidateName}],methods=[DELETE]}" onto public java.lang.String uk.co.mickrisk.CandidateController.deleteCandidate(java.lang.String)
-2016-06-29 16:15:40.426  INFO 4832 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2016-06-29 16:15:40.426  INFO 4832 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2016-06-29 16:15:40.972  INFO 4832 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2016-06-29 16:15:40.972  INFO 4832 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2016-06-29 16:15:41.097  INFO 4832 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2016-06-29 16:15:45.534  INFO 4832 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.context.environment.EnvironmentManagerMvcEndpoint.value(java.util.Map<java.lang.String, java.lang.String>)
-2016-06-29 16:15:45.534  INFO 4832 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/reset],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> org.springframework.cloud.context.environment.EnvironmentManagerMvcEndpoint.reset()
-2016-06-29 16:15:45.534  INFO 4832 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
-2016-06-29 16:15:45.534  INFO 4832 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/features || /features.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
-2016-06-29 16:15:45.534  INFO 4832 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/shutdown || /shutdown.json],methods=[POST]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.ShutdownMvcEndpoint.invoke()
-2016-06-29 16:15:45.549  INFO 4832 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
-2016-06-29 16:15:45.549  INFO 4832 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info || /info.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
-2016-06-29 16:15:45.549  INFO 4832 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
-2016-06-29 16:15:45.565  INFO 4832 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/pause || /pause.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke()
-2016-06-29 16:15:45.565  INFO 4832 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
-2016-06-29 16:15:45.565  INFO 4832 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
-2016-06-29 16:15:45.565  INFO 4832 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health || /health.json],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
-2016-06-29 16:15:45.565  INFO 4832 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/archaius || /archaius.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
-2016-06-29 16:15:45.565  INFO 4832 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/refresh || /refresh.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke()
-2016-06-29 16:15:45.565  INFO 4832 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
-2016-06-29 16:15:45.581  INFO 4832 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
-2016-06-29 16:15:45.581  INFO 4832 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
-2016-06-29 16:15:46.002  INFO 4832 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/restart || /restart.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.context.restart.RestartMvcEndpoint.invoke()
-2016-06-29 16:15:46.002  INFO 4832 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
-2016-06-29 16:15:46.002  INFO 4832 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env || /env.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
-2016-06-29 16:15:46.002  INFO 4832 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/resume || /resume.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke()
-2016-06-29 16:15:46.580  WARN 4832 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2016-06-29 16:15:46.580  INFO 4832 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2016-06-29 16:15:46.580  WARN 4832 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2016-06-29 16:15:46.596  INFO 4832 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2016-06-29 16:15:47.564  INFO 4832 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
-2016-06-29 16:15:47.595  INFO 4832 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'refreshScope' has been autodetected for JMX exposure
-2016-06-29 16:15:47.595  INFO 4832 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'environmentManager' has been autodetected for JMX exposure
-2016-06-29 16:15:47.595  INFO 4832 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
-2016-06-29 16:15:47.595  INFO 4832 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'refreshEndpoint' has been autodetected for JMX exposure
-2016-06-29 16:15:47.595  INFO 4832 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'restartEndpoint' has been autodetected for JMX exposure
-2016-06-29 16:15:47.611  INFO 4832 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
-2016-06-29 16:15:47.658  INFO 4832 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'restartEndpoint': registering with JMX server as MBean [org.springframework.cloud.context.restart:name=restartEndpoint,type=RestartEndpoint]
-2016-06-29 16:15:47.705  INFO 4832 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
-2016-06-29 16:15:48.641  INFO 4832 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=6c170b69,type=ConfigurationPropertiesRebinder]
-2016-06-29 16:15:48.657  INFO 4832 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'refreshEndpoint': registering with JMX server as MBean [org.springframework.cloud.endpoint:name=refreshEndpoint,type=RefreshEndpoint]
-2016-06-29 16:15:49.375  INFO 4832 --- [           main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
-2016-06-29 16:15:49.391  INFO 4832 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2016-06-29 16:15:50.047  INFO 4832 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
-2016-06-29 16:15:50.047  INFO 4832 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
-2016-06-29 16:15:50.250  INFO 4832 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
-2016-06-29 16:15:50.250  INFO 4832 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
-2016-06-29 16:15:50.671  INFO 4832 --- [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2016-06-29 16:15:51.483  INFO 4832 --- [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2016-06-29 16:15:51.483  INFO 4832 --- [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2016-06-29 16:15:51.483  INFO 4832 --- [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2016-06-29 16:15:51.483  INFO 4832 --- [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2016-06-29 16:15:51.483  INFO 4832 --- [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2016-06-29 16:15:51.483  INFO 4832 --- [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2016-06-29 16:15:51.483  INFO 4832 --- [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2016-06-29 16:15:51.967  INFO 4832 --- [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2016-06-29 16:15:51.967  INFO 4832 --- [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2016-06-29 16:15:51.967  INFO 4832 --- [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2016-06-29 16:15:52.217  INFO 4832 --- [           main] c.n.e.EurekaDiscoveryClientConfiguration : Registering application voting-candidate with eureka with status UP
-2016-06-29 16:15:52.217  INFO 4832 --- [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1467213352217, current=UP, previous=STARTING]
-2016-06-29 16:15:52.857  INFO 4832 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8077 (http)
-2016-06-29 16:15:52.857  INFO 4832 --- [           main] c.n.e.EurekaDiscoveryClientConfiguration : Updating port to 8077
-2016-06-29 16:15:52.873  INFO 4832 --- [           main] uk.co.mickrisk.CandidateApplication      : Started CandidateApplication in 53.344 seconds (JVM running for 69.513)
-2016-06-29 16:15:52.873  INFO 4832 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_VOTING-CANDIDATE/localhost:voting-candidate:8077: registering service...
-2016-06-29 16:15:53.216  INFO 4832 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_VOTING-CANDIDATE/localhost:voting-candidate:8077 - registration status: 204
-2016-06-29 16:16:21.962  INFO 4832 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2016-06-29 16:16:21.963  INFO 4832 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2016-06-29 16:16:21.963  INFO 4832 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2016-06-29 16:16:21.964  INFO 4832 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2016-06-29 16:16:21.964  INFO 4832 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2016-06-29 16:16:21.964  INFO 4832 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
-2016-06-29 16:16:21.964  INFO 4832 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2016-06-29 16:16:22.039  INFO 4832 --- [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2016-07-01 16:14:51.087  INFO 2904 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate Core {4.3.11.Final}
+2016-07-01 16:14:51.087  INFO 2904 --- [           main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2016-07-01 16:14:51.102  INFO 2904 --- [           main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2016-07-01 16:14:51.837  INFO 2904 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-07-01 16:14:52.180  INFO 2904 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-07-01 16:14:52.743  INFO 2904 --- [           main] o.h.h.i.ast.ASTQueryTranslatorFactory    : HHH000397: Using ASTQueryTranslatorFactory
+2016-07-01 16:14:53.571  INFO 2904 --- [           main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2016-07-01 16:14:53.587  INFO 2904 --- [           main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2016-07-01 16:14:57.587  INFO 2904 --- [           main] uk.co.mickrisk.CandidateController       : CandidateRepository says system has 0 candidates
+2016-07-01 16:15:03.675  INFO 2904 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/candidates],methods=[GET]}" onto public java.util.List<uk.co.mickrisk.Candidate> uk.co.mickrisk.CandidateController.getCandidates()
+2016-07-01 16:15:03.675  INFO 2904 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/candidate/{candidateName:.+}],methods=[GET]}" onto public uk.co.mickrisk.Candidate uk.co.mickrisk.CandidateController.getCandidate(java.lang.String)
+2016-07-01 16:15:03.675  INFO 2904 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/candidate/{candidateName:.+}],methods=[POST]}" onto public java.lang.String uk.co.mickrisk.CandidateController.addCandidate(java.lang.String)
+2016-07-01 16:15:03.675  INFO 2904 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/candidate/{candidateName}],methods=[DELETE]}" onto public java.lang.String uk.co.mickrisk.CandidateController.deleteCandidate(java.lang.String)
+2016-07-01 16:15:03.675  INFO 2904 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/candidates],methods=[DELETE]}" onto public java.lang.String uk.co.mickrisk.CandidateController.deleteAll()
+2016-07-01 16:15:03.675  INFO 2904 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/api-docs],methods=[GET]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String)
+2016-07-01 16:15:03.691  INFO 2904 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2016-07-01 16:15:03.691  INFO 2904 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2016-07-01 16:15:03.691  INFO 2904 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2016-07-01 16:15:03.706  INFO 2904 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-07-01 16:15:03.706  INFO 2904 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-07-01 16:15:06.097  INFO 2904 --- [           main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2016-07-01 16:15:10.738  INFO 2904 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/shutdown || /shutdown.json],methods=[POST]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.ShutdownMvcEndpoint.invoke()
+2016-07-01 16:15:10.738  INFO 2904 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/actuator || /actuator.json],produces=[application/json]}" onto public org.springframework.hateoas.ResourceSupport org.springframework.boot.actuate.endpoint.mvc.HalJsonMvcEndpoint.links()
+2016-07-01 16:15:10.738  INFO 2904 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-01 16:15:10.738  INFO 2904 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info || /info.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-01 16:15:10.738  INFO 2904 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/refresh || /refresh.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke()
+2016-07-01 16:15:10.753  INFO 2904 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/resume || /resume.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke()
+2016-07-01 16:15:10.769  INFO 2904 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2016-07-01 16:15:10.769  INFO 2904 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env || /env.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-01 16:15:10.769  INFO 2904 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-01 16:15:10.769  INFO 2904 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2016-07-01 16:15:10.769  INFO 2904 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-01 16:15:10.769  INFO 2904 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-01 16:15:10.769  INFO 2904 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-01 16:15:10.785  INFO 2904 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/archaius || /archaius.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-01 16:15:10.785  INFO 2904 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health || /health.json],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
+2016-07-01 16:15:10.785  INFO 2904 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-01 16:15:10.785  INFO 2904 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/pause || /pause.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke()
+2016-07-01 16:15:10.785  INFO 2904 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/restart || /restart.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.context.restart.RestartMvcEndpoint.invoke()
+2016-07-01 16:15:10.785  INFO 2904 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-01 16:15:10.785  INFO 2904 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.context.environment.EnvironmentManagerMvcEndpoint.value(java.util.Map<java.lang.String, java.lang.String>)
+2016-07-01 16:15:10.785  INFO 2904 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/reset],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> org.springframework.cloud.context.environment.EnvironmentManagerMvcEndpoint.reset()
+2016-07-01 16:15:10.785  INFO 2904 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/features || /features.json],methods=[GET],produces=[application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-07-01 16:15:13.534  INFO 2904 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@657c742d: startup date [Fri Jul 01 16:14:16 BST 2016]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@351f5ee5
+2016-07-01 16:15:13.550  INFO 2904 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Detected ResponseBodyAdvice bean in org.springframework.boot.actuate.autoconfigure.EndpointWebMvcHypermediaManagementContextConfiguration$ActuatorEndpointLinksAdvice
+2016-07-01 16:15:13.878  INFO 2904 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-07-01 16:15:13.878  INFO 2904 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-07-01 16:15:13.987  INFO 2904 --- [           main] .m.m.a.ExceptionHandlerExceptionResolver : Detected ResponseBodyAdvice implementation in org.springframework.boot.actuate.autoconfigure.EndpointWebMvcHypermediaManagementContextConfiguration$ActuatorEndpointLinksAdvice
+2016-07-01 16:15:14.034  INFO 2904 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-07-01 16:15:16.753  WARN 2904 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2016-07-01 16:15:16.753  INFO 2904 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2016-07-01 16:15:16.753  WARN 2904 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2016-07-01 16:15:16.753  INFO 2904 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2016-07-01 16:15:17.752  INFO 2904 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-07-01 16:15:17.799  INFO 2904 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'refreshScope' has been autodetected for JMX exposure
+2016-07-01 16:15:17.799  INFO 2904 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'environmentManager' has been autodetected for JMX exposure
+2016-07-01 16:15:17.815  INFO 2904 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
+2016-07-01 16:15:17.831  INFO 2904 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'refreshEndpoint' has been autodetected for JMX exposure
+2016-07-01 16:15:17.831  INFO 2904 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'restartEndpoint' has been autodetected for JMX exposure
+2016-07-01 16:15:17.831  INFO 2904 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
+2016-07-01 16:15:17.877  INFO 2904 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'restartEndpoint': registering with JMX server as MBean [org.springframework.cloud.context.restart:name=restartEndpoint,type=RestartEndpoint]
+2016-07-01 16:15:17.909  INFO 2904 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
+2016-07-01 16:15:18.377  INFO 2904 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=657c742d,type=ConfigurationPropertiesRebinder]
+2016-07-01 16:15:18.393  INFO 2904 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'refreshEndpoint': registering with JMX server as MBean [org.springframework.cloud.endpoint:name=refreshEndpoint,type=RefreshEndpoint]
+2016-07-01 16:15:19.424  INFO 2904 --- [           main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2016-07-01 16:15:19.502  INFO 2904 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2016-07-01 16:15:20.611  INFO 2904 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2016-07-01 16:15:20.611  INFO 2904 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2016-07-01 16:15:20.971  INFO 2904 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2016-07-01 16:15:20.971  INFO 2904 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2016-07-01 16:15:21.455  INFO 2904 --- [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-01 16:15:22.363  INFO 2904 --- [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2016-07-01 16:15:22.363  INFO 2904 --- [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2016-07-01 16:15:22.363  INFO 2904 --- [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2016-07-01 16:15:22.363  INFO 2904 --- [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2016-07-01 16:15:22.363  INFO 2904 --- [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2016-07-01 16:15:22.363  INFO 2904 --- [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2016-07-01 16:15:22.363  INFO 2904 --- [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2016-07-01 16:15:22.814  INFO 2904 --- [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2016-07-01 16:15:22.814  INFO 2904 --- [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2016-07-01 16:15:22.814  INFO 2904 --- [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2016-07-01 16:15:24.064  INFO 2904 --- [           main] c.n.e.EurekaDiscoveryClientConfiguration : Registering application voting-candidate with eureka with status UP
+2016-07-01 16:15:24.064  INFO 2904 --- [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1467386124064, current=UP, previous=STARTING]
+2016-07-01 16:15:25.767  INFO 2904 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2016-07-01 16:15:25.782  INFO 2904 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_VOTING-CANDIDATE/localhost:voting-candidate:8077: registering service...
+2016-07-01 16:15:25.970  INFO 2904 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Found {0} custom documentation plugin(s)
+2016-07-01 16:15:25.985  INFO 2904 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2016-07-01 16:15:25.985  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method links was hal-json-mvc-endpoint
+2016-07-01 16:15:25.985  INFO 2904 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: links belongs to groups: [[ResourceGroup{groupName='hal-json-mvc-endpoint', position=0, controller=org.springframework.boot.actuate.endpoint.mvc.HalJsonMvcEndpoint}]] 
+2016-07-01 16:15:26.001  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was endpoint-mvc-adapter
+2016-07-01 16:15:26.001  INFO 2904 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: invoke belongs to groups: [[ResourceGroup{groupName='endpoint-mvc-adapter', position=0, controller=org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter}]] 
+2016-07-01 16:15:26.001  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was endpoint-mvc-adapter
+2016-07-01 16:15:26.001  INFO 2904 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: invoke belongs to groups: [[ResourceGroup{groupName='endpoint-mvc-adapter', position=0, controller=org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter}]] 
+2016-07-01 16:15:26.001  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was endpoint-mvc-adapter
+2016-07-01 16:15:26.001  INFO 2904 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: invoke belongs to groups: [[ResourceGroup{groupName='endpoint-mvc-adapter', position=0, controller=org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter}]] 
+2016-07-01 16:15:26.016  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getCandidate was candidate-controller
+2016-07-01 16:15:26.016  INFO 2904 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: getCandidate belongs to groups: [[ResourceGroup{groupName='candidate-controller', position=0, controller=uk.co.mickrisk.CandidateController}]] 
+2016-07-01 16:15:26.016  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method addCandidate was candidate-controller
+2016-07-01 16:15:26.016  INFO 2904 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: addCandidate belongs to groups: [[ResourceGroup{groupName='candidate-controller', position=0, controller=uk.co.mickrisk.CandidateController}]] 
+2016-07-01 16:15:26.016  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method deleteCandidate was candidate-controller
+2016-07-01 16:15:26.016  INFO 2904 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: deleteCandidate belongs to groups: [[ResourceGroup{groupName='candidate-controller', position=0, controller=uk.co.mickrisk.CandidateController}]] 
+2016-07-01 16:15:26.016  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getCandidates was candidate-controller
+2016-07-01 16:15:26.016  INFO 2904 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: getCandidates belongs to groups: [[ResourceGroup{groupName='candidate-controller', position=0, controller=uk.co.mickrisk.CandidateController}]] 
+2016-07-01 16:15:26.016  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method deleteAll was candidate-controller
+2016-07-01 16:15:26.016  INFO 2904 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: deleteAll belongs to groups: [[ResourceGroup{groupName='candidate-controller', position=0, controller=uk.co.mickrisk.CandidateController}]] 
+2016-07-01 16:15:26.016  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was endpoint-mvc-adapter
+2016-07-01 16:15:26.016  INFO 2904 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: invoke belongs to groups: [[ResourceGroup{groupName='endpoint-mvc-adapter', position=0, controller=org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter}]] 
+2016-07-01 16:15:26.016  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was endpoint-mvc-adapter
+2016-07-01 16:15:26.016  INFO 2904 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: invoke belongs to groups: [[ResourceGroup{groupName='endpoint-mvc-adapter', position=0, controller=org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter}]] 
+2016-07-01 16:15:26.016  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was environment-mvc-endpoint
+2016-07-01 16:15:26.016  INFO 2904 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: invoke belongs to groups: [[ResourceGroup{groupName='environment-mvc-endpoint', position=0, controller=org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint}]] 
+2016-07-01 16:15:26.016  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method reset was environment-manager-mvc-endpoint
+2016-07-01 16:15:26.016  INFO 2904 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: reset belongs to groups: [[ResourceGroup{groupName='environment-manager-mvc-endpoint', position=0, controller=org.springframework.cloud.context.environment.EnvironmentManagerMvcEndpoint}]] 
+2016-07-01 16:15:26.016  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method value was environment-mvc-endpoint
+2016-07-01 16:15:26.016  INFO 2904 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: value belongs to groups: [[ResourceGroup{groupName='environment-mvc-endpoint', position=0, controller=org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint}]] 
+2016-07-01 16:15:26.016  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method value was environment-manager-mvc-endpoint
+2016-07-01 16:15:26.016  INFO 2904 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: value belongs to groups: [[ResourceGroup{groupName='environment-manager-mvc-endpoint', position=0, controller=org.springframework.cloud.context.environment.EnvironmentManagerMvcEndpoint}]] 
+2016-07-01 16:15:26.016  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method error was basic-error-controller
+2016-07-01 16:15:26.032  INFO 2904 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: error belongs to groups: [[ResourceGroup{groupName='basic-error-controller', position=0, controller=org.springframework.boot.autoconfigure.web.BasicErrorController}]] 
+2016-07-01 16:15:26.032  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method errorHtml was basic-error-controller
+2016-07-01 16:15:26.032  INFO 2904 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: errorHtml belongs to groups: [[ResourceGroup{groupName='basic-error-controller', position=0, controller=org.springframework.boot.autoconfigure.web.BasicErrorController}]] 
+2016-07-01 16:15:26.032  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was endpoint-mvc-adapter
+2016-07-01 16:15:26.032  INFO 2904 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: invoke belongs to groups: [[ResourceGroup{groupName='endpoint-mvc-adapter', position=0, controller=org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter}]] 
+2016-07-01 16:15:26.032  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was health-mvc-endpoint
+2016-07-01 16:15:26.032  INFO 2904 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: invoke belongs to groups: [[ResourceGroup{groupName='health-mvc-endpoint', position=0, controller=org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint}]] 
+2016-07-01 16:15:26.032  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was endpoint-mvc-adapter
+2016-07-01 16:15:26.032  INFO 2904 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: invoke belongs to groups: [[ResourceGroup{groupName='endpoint-mvc-adapter', position=0, controller=org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter}]] 
+2016-07-01 16:15:26.032  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was endpoint-mvc-adapter
+2016-07-01 16:15:26.032  INFO 2904 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: invoke belongs to groups: [[ResourceGroup{groupName='endpoint-mvc-adapter', position=0, controller=org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter}]] 
+2016-07-01 16:15:26.032  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was metrics-mvc-endpoint
+2016-07-01 16:15:26.032  INFO 2904 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: invoke belongs to groups: [[ResourceGroup{groupName='metrics-mvc-endpoint', position=0, controller=org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint}]] 
+2016-07-01 16:15:26.032  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method value was metrics-mvc-endpoint
+2016-07-01 16:15:26.032  INFO 2904 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: value belongs to groups: [[ResourceGroup{groupName='metrics-mvc-endpoint', position=0, controller=org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint}]] 
+2016-07-01 16:15:26.032  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was generic-postable-mvc-endpoint
+2016-07-01 16:15:26.032  INFO 2904 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: invoke belongs to groups: [[ResourceGroup{groupName='generic-postable-mvc-endpoint', position=0, controller=org.springframework.cloud.endpoint.GenericPostableMvcEndpoint}]] 
+2016-07-01 16:15:26.032  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was generic-postable-mvc-endpoint
+2016-07-01 16:15:26.032  INFO 2904 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: invoke belongs to groups: [[ResourceGroup{groupName='generic-postable-mvc-endpoint', position=0, controller=org.springframework.cloud.endpoint.GenericPostableMvcEndpoint}]] 
+2016-07-01 16:15:26.032  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was restart-mvc-endpoint
+2016-07-01 16:15:26.032  INFO 2904 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: invoke belongs to groups: [[ResourceGroup{groupName='restart-mvc-endpoint', position=0, controller=org.springframework.cloud.context.restart.RestartMvcEndpoint}]] 
+2016-07-01 16:15:26.032  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was generic-postable-mvc-endpoint
+2016-07-01 16:15:26.032  INFO 2904 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: invoke belongs to groups: [[ResourceGroup{groupName='generic-postable-mvc-endpoint', position=0, controller=org.springframework.cloud.endpoint.GenericPostableMvcEndpoint}]] 
+2016-07-01 16:15:26.032  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was shutdown-mvc-endpoint
+2016-07-01 16:15:26.032  INFO 2904 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: invoke belongs to groups: [[ResourceGroup{groupName='shutdown-mvc-endpoint', position=0, controller=org.springframework.boot.actuate.endpoint.mvc.ShutdownMvcEndpoint}]] 
+2016-07-01 16:15:26.032  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was endpoint-mvc-adapter
+2016-07-01 16:15:26.032  INFO 2904 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: invoke belongs to groups: [[ResourceGroup{groupName='endpoint-mvc-adapter', position=0, controller=org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter}]] 
+2016-07-01 16:15:26.032  INFO 2904 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Created resource listing Path: /default/shutdown-mvc-endpoint Description: shutdown-mvc-endpoint Position: 0
+2016-07-01 16:15:26.032  INFO 2904 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Created resource listing Path: /default/candidate-controller Description: candidate-controller Position: 0
+2016-07-01 16:15:26.032  INFO 2904 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Created resource listing Path: /default/metrics-mvc-endpoint Description: metrics-mvc-endpoint Position: 0
+2016-07-01 16:15:26.032  INFO 2904 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Created resource listing Path: /default/hal-json-mvc-endpoint Description: hal-json-mvc-endpoint Position: 0
+2016-07-01 16:15:26.032  INFO 2904 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Created resource listing Path: /default/basic-error-controller Description: basic-error-controller Position: 0
+2016-07-01 16:15:26.032  INFO 2904 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Created resource listing Path: /default/health-mvc-endpoint Description: health-mvc-endpoint Position: 0
+2016-07-01 16:15:26.032  INFO 2904 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Created resource listing Path: /default/restart-mvc-endpoint Description: restart-mvc-endpoint Position: 0
+2016-07-01 16:15:26.032  INFO 2904 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Created resource listing Path: /default/generic-postable-mvc-endpoint Description: generic-postable-mvc-endpoint Position: 0
+2016-07-01 16:15:26.048  INFO 2904 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Created resource listing Path: /default/endpoint-mvc-adapter Description: endpoint-mvc-adapter Position: 0
+2016-07-01 16:15:26.048  INFO 2904 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Created resource listing Path: /default/environment-mvc-endpoint Description: environment-mvc-endpoint Position: 0
+2016-07-01 16:15:26.048  INFO 2904 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Created resource listing Path: /default/environment-manager-mvc-endpoint Description: environment-manager-mvc-endpoint Position: 0
+2016-07-01 16:15:26.063  INFO 2904 --- [           main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.Map<java.lang.String,java.lang.Object>(true)
+2016-07-01 16:15:26.063  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.util.Map<java.lang.String,java.lang.Object>(true)
+2016-07-01 16:15:26.079  INFO 2904 --- [           main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.Map<java.lang.String,java.lang.Object>(true)
+2016-07-01 16:15:26.079  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.util.Map<java.lang.String,java.lang.Object>(true)
+2016-07-01 16:15:26.095  INFO 2904 --- [           main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /error.org.springframework.boot.autoconfigure.web.BasicErrorController.error.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.095  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /error.org.springframework.boot.autoconfigure.web.BasicErrorController.error.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.174  INFO 2904 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_VOTING-CANDIDATE/localhost:voting-candidate:8077 - registration status: 204
+2016-07-01 16:15:26.191  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method error was basic-error-controller
+2016-07-01 16:15:26.191  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method error was basic-error-controller
+2016-07-01 16:15:26.207  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method error was basic-error-controller
+2016-07-01 16:15:26.207  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method error was basic-error-controller
+2016-07-01 16:15:26.207  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method error was basic-error-controller
+2016-07-01 16:15:26.207  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method error was basic-error-controller
+2016-07-01 16:15:26.223  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method error was basic-error-controller
+2016-07-01 16:15:26.223  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method error was basic-error-controller
+2016-07-01 16:15:26.223  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method error was basic-error-controller
+2016-07-01 16:15:26.223  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method error was basic-error-controller
+2016-07-01 16:15:26.223  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method error was basic-error-controller
+2016-07-01 16:15:26.223  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method error was basic-error-controller
+2016-07-01 16:15:26.238  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method error was basic-error-controller
+2016-07-01 16:15:26.238  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method error was basic-error-controller
+2016-07-01 16:15:26.238  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method error was basic-error-controller
+2016-07-01 16:15:26.238  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method error was basic-error-controller
+2016-07-01 16:15:26.238  INFO 2904 --- [           main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: org.springframework.web.servlet.ModelAndView(true)
+2016-07-01 16:15:26.238  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key org.springframework.web.servlet.ModelAndView(true)
+2016-07-01 16:15:26.238  INFO 2904 --- [           main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: org.springframework.web.servlet.ModelAndView(true)
+2016-07-01 16:15:26.238  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key org.springframework.web.servlet.ModelAndView(true)
+2016-07-01 16:15:26.582  INFO 2904 --- [           main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: org.springframework.web.servlet.ModelAndView(true)
+2016-07-01 16:15:26.582  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key org.springframework.web.servlet.ModelAndView(true)
+2016-07-01 16:15:26.582  INFO 2904 --- [           main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: org.springframework.web.servlet.ModelAndView(true)
+2016-07-01 16:15:26.582  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key org.springframework.web.servlet.ModelAndView(true)
+2016-07-01 16:15:26.582  INFO 2904 --- [           main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: org.springframework.web.servlet.View(true)
+2016-07-01 16:15:26.582  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key org.springframework.web.servlet.View(true)
+2016-07-01 16:15:26.582  INFO 2904 --- [           main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: org.springframework.web.servlet.View(true)
+2016-07-01 16:15:26.582  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key org.springframework.web.servlet.View(true)
+2016-07-01 16:15:26.582  INFO 2904 --- [           main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /error.org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.582  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /error.org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.598  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method errorHtml was basic-error-controller
+2016-07-01 16:15:26.598  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method errorHtml was basic-error-controller
+2016-07-01 16:15:26.598  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method errorHtml was basic-error-controller
+2016-07-01 16:15:26.598  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method errorHtml was basic-error-controller
+2016-07-01 16:15:26.598  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method errorHtml was basic-error-controller
+2016-07-01 16:15:26.598  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method errorHtml was basic-error-controller
+2016-07-01 16:15:26.598  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method errorHtml was basic-error-controller
+2016-07-01 16:15:26.613  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method errorHtml was basic-error-controller
+2016-07-01 16:15:26.613  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method errorHtml was basic-error-controller
+2016-07-01 16:15:26.613  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method errorHtml was basic-error-controller
+2016-07-01 16:15:26.613  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method errorHtml was basic-error-controller
+2016-07-01 16:15:26.613  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method errorHtml was basic-error-controller
+2016-07-01 16:15:26.613  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method errorHtml was basic-error-controller
+2016-07-01 16:15:26.613  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method errorHtml was basic-error-controller
+2016-07-01 16:15:26.613  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method errorHtml was basic-error-controller
+2016-07-01 16:15:26.629  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method errorHtml was basic-error-controller
+2016-07-01 16:15:26.644  INFO 2904 --- [           main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.String(true)
+2016-07-01 16:15:26.644  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.String(true)
+2016-07-01 16:15:26.644  INFO 2904 --- [           main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.String(true)
+2016-07-01 16:15:26.644  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2016-07-01 16:15:26.644  INFO 2904 --- [           main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /candidate/{candidateName:.+}.uk.co.mickrisk.CandidateController.addCandidate.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.644  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /candidate/{candidateName:.+}.uk.co.mickrisk.CandidateController.addCandidate.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.660  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method addCandidate was candidate-controller
+2016-07-01 16:15:26.660  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method addCandidate was candidate-controller
+2016-07-01 16:15:26.660  INFO 2904 --- [           main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.String(true)
+2016-07-01 16:15:26.660  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.String(true)
+2016-07-01 16:15:26.660  INFO 2904 --- [           main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.String(true)
+2016-07-01 16:15:26.660  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2016-07-01 16:15:26.660  INFO 2904 --- [           main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /candidates.uk.co.mickrisk.CandidateController.deleteAll.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.660  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /candidates.uk.co.mickrisk.CandidateController.deleteAll.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.660  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method deleteAll was candidate-controller
+2016-07-01 16:15:26.660  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method deleteAll was candidate-controller
+2016-07-01 16:15:26.660  INFO 2904 --- [           main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.String(true)
+2016-07-01 16:15:26.660  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.String(true)
+2016-07-01 16:15:26.676  INFO 2904 --- [           main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.String(true)
+2016-07-01 16:15:26.676  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.String(true)
+2016-07-01 16:15:26.676  INFO 2904 --- [           main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /candidate/{candidateName}.uk.co.mickrisk.CandidateController.deleteCandidate.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.676  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /candidate/{candidateName}.uk.co.mickrisk.CandidateController.deleteCandidate.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.676  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method deleteCandidate was candidate-controller
+2016-07-01 16:15:26.676  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method deleteCandidate was candidate-controller
+2016-07-01 16:15:26.676  INFO 2904 --- [           main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: uk.co.mickrisk.Candidate(true)
+2016-07-01 16:15:26.676  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key uk.co.mickrisk.Candidate(true)
+2016-07-01 16:15:26.676  INFO 2904 --- [           main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: uk.co.mickrisk.Candidate(true)
+2016-07-01 16:15:26.676  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key uk.co.mickrisk.Candidate(true)
+2016-07-01 16:15:26.691  INFO 2904 --- [           main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: uk.co.mickrisk.Candidate(true)
+2016-07-01 16:15:26.691  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key uk.co.mickrisk.Candidate(true)
+2016-07-01 16:15:26.691  INFO 2904 --- [           main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: uk.co.mickrisk.Candidate(true)
+2016-07-01 16:15:26.691  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key uk.co.mickrisk.Candidate(true)
+2016-07-01 16:15:26.691  INFO 2904 --- [           main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /candidate/{candidateName:.+}.uk.co.mickrisk.CandidateController.getCandidate.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.691  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /candidate/{candidateName:.+}.uk.co.mickrisk.CandidateController.getCandidate.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.691  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getCandidate was candidate-controller
+2016-07-01 16:15:26.691  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getCandidate was candidate-controller
+2016-07-01 16:15:26.691  INFO 2904 --- [           main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.List<uk.co.mickrisk.Candidate>(true)
+2016-07-01 16:15:26.691  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.util.List<uk.co.mickrisk.Candidate>(true)
+2016-07-01 16:15:26.691  INFO 2904 --- [           main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.util.List<uk.co.mickrisk.Candidate>(true)
+2016-07-01 16:15:26.691  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.util.List<uk.co.mickrisk.Candidate>(true)
+2016-07-01 16:15:26.691  INFO 2904 --- [           main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: uk.co.mickrisk.Candidate(true)
+2016-07-01 16:15:26.691  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key uk.co.mickrisk.Candidate(true)
+2016-07-01 16:15:26.691  INFO 2904 --- [           main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: java.util.List<uk.co.mickrisk.Candidate>(true)
+2016-07-01 16:15:26.691  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key java.util.List<uk.co.mickrisk.Candidate>(true)
+2016-07-01 16:15:26.691  INFO 2904 --- [           main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: uk.co.mickrisk.Candidate(true)
+2016-07-01 16:15:26.691  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key uk.co.mickrisk.Candidate(true)
+2016-07-01 16:15:26.691  INFO 2904 --- [           main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /candidates.uk.co.mickrisk.CandidateController.getCandidates.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.691  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /candidates.uk.co.mickrisk.CandidateController.getCandidates.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.691  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getCandidates was candidate-controller
+2016-07-01 16:15:26.707  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getCandidates was candidate-controller
+2016-07-01 16:15:26.707  INFO 2904 --- [           main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2016-07-01 16:15:26.707  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.Object(true)
+2016-07-01 16:15:26.707  INFO 2904 --- [           main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2016-07-01 16:15:26.707  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.Object(true)
+2016-07-01 16:15:26.707  INFO 2904 --- [           main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /archaius.org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.707  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /archaius.org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.707  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was endpoint-mvc-adapter
+2016-07-01 16:15:26.707  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was endpoint-mvc-adapter
+2016-07-01 16:15:26.707  INFO 2904 --- [           main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /archaius.json.org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.707  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /archaius.json.org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.707  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was endpoint-mvc-adapter
+2016-07-01 16:15:26.707  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was endpoint-mvc-adapter
+2016-07-01 16:15:26.707  INFO 2904 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_1
+2016-07-01 16:15:26.707  INFO 2904 --- [           main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2016-07-01 16:15:26.707  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.Object(true)
+2016-07-01 16:15:26.707  INFO 2904 --- [           main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2016-07-01 16:15:26.707  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.Object(true)
+2016-07-01 16:15:26.707  INFO 2904 --- [           main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /autoconfig.org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.707  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /autoconfig.org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.707  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was endpoint-mvc-adapter
+2016-07-01 16:15:26.722  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was endpoint-mvc-adapter
+2016-07-01 16:15:26.722  INFO 2904 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_2
+2016-07-01 16:15:26.722  INFO 2904 --- [           main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /autoconfig.json.org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.722  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /autoconfig.json.org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.722  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was endpoint-mvc-adapter
+2016-07-01 16:15:26.722  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was endpoint-mvc-adapter
+2016-07-01 16:15:26.722  INFO 2904 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_3
+2016-07-01 16:15:26.722  INFO 2904 --- [           main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2016-07-01 16:15:26.722  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.Object(true)
+2016-07-01 16:15:26.722  INFO 2904 --- [           main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2016-07-01 16:15:26.722  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.Object(true)
+2016-07-01 16:15:26.722  INFO 2904 --- [           main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /beans.org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.722  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /beans.org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.722  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was endpoint-mvc-adapter
+2016-07-01 16:15:26.722  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was endpoint-mvc-adapter
+2016-07-01 16:15:26.722  INFO 2904 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_4
+2016-07-01 16:15:26.722  INFO 2904 --- [           main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /beans.json.org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.722  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /beans.json.org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.722  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was endpoint-mvc-adapter
+2016-07-01 16:15:26.722  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was endpoint-mvc-adapter
+2016-07-01 16:15:26.722  INFO 2904 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_5
+2016-07-01 16:15:26.722  INFO 2904 --- [           main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2016-07-01 16:15:26.722  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.Object(true)
+2016-07-01 16:15:26.722  INFO 2904 --- [           main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2016-07-01 16:15:26.722  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.Object(true)
+2016-07-01 16:15:26.722  INFO 2904 --- [           main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /configprops.org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.722  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /configprops.org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.738  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was endpoint-mvc-adapter
+2016-07-01 16:15:26.738  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was endpoint-mvc-adapter
+2016-07-01 16:15:26.738  INFO 2904 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_6
+2016-07-01 16:15:26.738  INFO 2904 --- [           main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /configprops.json.org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.738  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /configprops.json.org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.754  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was endpoint-mvc-adapter
+2016-07-01 16:15:26.769  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was endpoint-mvc-adapter
+2016-07-01 16:15:26.769  INFO 2904 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_7
+2016-07-01 16:15:26.769  INFO 2904 --- [           main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2016-07-01 16:15:26.769  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.Object(true)
+2016-07-01 16:15:26.769  INFO 2904 --- [           main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2016-07-01 16:15:26.769  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.Object(true)
+2016-07-01 16:15:26.769  INFO 2904 --- [           main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /dump.org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.769  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /dump.org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.769  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was endpoint-mvc-adapter
+2016-07-01 16:15:26.769  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was endpoint-mvc-adapter
+2016-07-01 16:15:26.769  INFO 2904 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_8
+2016-07-01 16:15:26.769  INFO 2904 --- [           main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /dump.json.org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.769  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /dump.json.org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.769  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was endpoint-mvc-adapter
+2016-07-01 16:15:26.769  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was endpoint-mvc-adapter
+2016-07-01 16:15:26.769  INFO 2904 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_9
+2016-07-01 16:15:26.769  INFO 2904 --- [           main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2016-07-01 16:15:26.769  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.Object(true)
+2016-07-01 16:15:26.769  INFO 2904 --- [           main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2016-07-01 16:15:26.769  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.Object(true)
+2016-07-01 16:15:26.769  INFO 2904 --- [           main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /features.org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.769  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /features.org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.769  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was endpoint-mvc-adapter
+2016-07-01 16:15:26.769  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was endpoint-mvc-adapter
+2016-07-01 16:15:26.769  INFO 2904 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_10
+2016-07-01 16:15:26.769  INFO 2904 --- [           main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /features.json.org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.769  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /features.json.org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.769  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was endpoint-mvc-adapter
+2016-07-01 16:15:26.832  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was endpoint-mvc-adapter
+2016-07-01 16:15:26.847  INFO 2904 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_11
+2016-07-01 16:15:26.847  INFO 2904 --- [           main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2016-07-01 16:15:26.847  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.Object(true)
+2016-07-01 16:15:26.847  INFO 2904 --- [           main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2016-07-01 16:15:26.847  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.Object(true)
+2016-07-01 16:15:26.847  INFO 2904 --- [           main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /info.org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.847  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /info.org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.847  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was endpoint-mvc-adapter
+2016-07-01 16:15:26.847  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was endpoint-mvc-adapter
+2016-07-01 16:15:26.847  INFO 2904 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_12
+2016-07-01 16:15:26.847  INFO 2904 --- [           main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /info.json.org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.847  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /info.json.org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.847  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was endpoint-mvc-adapter
+2016-07-01 16:15:26.847  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was endpoint-mvc-adapter
+2016-07-01 16:15:26.879  INFO 2904 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_13
+2016-07-01 16:15:26.879  INFO 2904 --- [           main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2016-07-01 16:15:26.879  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.Object(true)
+2016-07-01 16:15:26.879  INFO 2904 --- [           main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2016-07-01 16:15:26.879  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.Object(true)
+2016-07-01 16:15:26.879  INFO 2904 --- [           main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /mappings.org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.879  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /mappings.org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.879  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was endpoint-mvc-adapter
+2016-07-01 16:15:26.879  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was endpoint-mvc-adapter
+2016-07-01 16:15:26.879  INFO 2904 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_14
+2016-07-01 16:15:26.879  INFO 2904 --- [           main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /mappings.json.org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.879  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /mappings.json.org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.879  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was endpoint-mvc-adapter
+2016-07-01 16:15:26.879  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was endpoint-mvc-adapter
+2016-07-01 16:15:26.879  INFO 2904 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_15
+2016-07-01 16:15:26.879  INFO 2904 --- [           main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2016-07-01 16:15:26.879  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.Object(true)
+2016-07-01 16:15:26.879  INFO 2904 --- [           main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2016-07-01 16:15:26.879  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.Object(true)
+2016-07-01 16:15:26.879  INFO 2904 --- [           main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /trace.org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.879  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /trace.org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.894  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was endpoint-mvc-adapter
+2016-07-01 16:15:26.894  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was endpoint-mvc-adapter
+2016-07-01 16:15:26.894  INFO 2904 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_16
+2016-07-01 16:15:26.894  INFO 2904 --- [           main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /trace.json.org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.894  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /trace.json.org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.894  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was endpoint-mvc-adapter
+2016-07-01 16:15:26.894  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was endpoint-mvc-adapter
+2016-07-01 16:15:26.894  INFO 2904 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_17
+2016-07-01 16:15:26.894  INFO 2904 --- [           main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2016-07-01 16:15:26.894  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.Object(true)
+2016-07-01 16:15:26.910  INFO 2904 --- [           main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2016-07-01 16:15:26.910  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.Object(true)
+2016-07-01 16:15:26.910  INFO 2904 --- [           main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /env/reset.org.springframework.cloud.context.environment.EnvironmentManagerMvcEndpoint.reset.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.910  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /env/reset.org.springframework.cloud.context.environment.EnvironmentManagerMvcEndpoint.reset.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.910  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method reset was environment-manager-mvc-endpoint
+2016-07-01 16:15:26.910  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method reset was environment-manager-mvc-endpoint
+2016-07-01 16:15:26.910  INFO 2904 --- [           main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2016-07-01 16:15:26.910  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.Object(true)
+2016-07-01 16:15:26.910  INFO 2904 --- [           main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2016-07-01 16:15:26.910  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.Object(true)
+2016-07-01 16:15:26.910  INFO 2904 --- [           main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /env.org.springframework.cloud.context.environment.EnvironmentManagerMvcEndpoint.value.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.910  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /env.org.springframework.cloud.context.environment.EnvironmentManagerMvcEndpoint.value.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.910  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method value was environment-manager-mvc-endpoint
+2016-07-01 16:15:26.926  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method value was environment-manager-mvc-endpoint
+2016-07-01 16:15:26.926  INFO 2904 --- [           main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2016-07-01 16:15:26.926  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.Object(true)
+2016-07-01 16:15:26.926  INFO 2904 --- [           main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2016-07-01 16:15:26.926  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.Object(true)
+2016-07-01 16:15:26.926  INFO 2904 --- [           main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /env.org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.926  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /env.org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.926  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was environment-mvc-endpoint
+2016-07-01 16:15:26.926  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was environment-mvc-endpoint
+2016-07-01 16:15:26.926  INFO 2904 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_18
+2016-07-01 16:15:26.926  INFO 2904 --- [           main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /env.json.org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.926  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /env.json.org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.926  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was environment-mvc-endpoint
+2016-07-01 16:15:26.941  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was environment-mvc-endpoint
+2016-07-01 16:15:26.941  INFO 2904 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_19
+2016-07-01 16:15:26.941  INFO 2904 --- [           main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2016-07-01 16:15:26.941  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.Object(true)
+2016-07-01 16:15:26.941  INFO 2904 --- [           main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2016-07-01 16:15:26.941  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.Object(true)
+2016-07-01 16:15:26.941  INFO 2904 --- [           main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /env/{name:.*}.org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.972  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /env/{name:.*}.org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.972  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method value was environment-mvc-endpoint
+2016-07-01 16:15:26.972  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method value was environment-mvc-endpoint
+2016-07-01 16:15:26.972  INFO 2904 --- [           main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2016-07-01 16:15:26.972  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.Object(true)
+2016-07-01 16:15:26.972  INFO 2904 --- [           main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2016-07-01 16:15:26.972  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.Object(true)
+2016-07-01 16:15:26.972  INFO 2904 --- [           main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /pause.org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.972  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /pause.org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.972  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was generic-postable-mvc-endpoint
+2016-07-01 16:15:26.972  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was generic-postable-mvc-endpoint
+2016-07-01 16:15:26.988  INFO 2904 --- [           main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /pause.json.org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.988  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /pause.json.org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.988  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was generic-postable-mvc-endpoint
+2016-07-01 16:15:26.988  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was generic-postable-mvc-endpoint
+2016-07-01 16:15:26.988  INFO 2904 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingPOST_1
+2016-07-01 16:15:26.988  INFO 2904 --- [           main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2016-07-01 16:15:26.988  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.Object(true)
+2016-07-01 16:15:26.988  INFO 2904 --- [           main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2016-07-01 16:15:26.988  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.Object(true)
+2016-07-01 16:15:26.988  INFO 2904 --- [           main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /refresh.org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.988  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /refresh.org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.988  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was generic-postable-mvc-endpoint
+2016-07-01 16:15:26.988  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was generic-postable-mvc-endpoint
+2016-07-01 16:15:26.988  INFO 2904 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingPOST_2
+2016-07-01 16:15:26.988  INFO 2904 --- [           main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /refresh.json.org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.988  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /refresh.json.org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:26.988  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was generic-postable-mvc-endpoint
+2016-07-01 16:15:27.051  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was generic-postable-mvc-endpoint
+2016-07-01 16:15:27.066  INFO 2904 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingPOST_3
+2016-07-01 16:15:27.082  INFO 2904 --- [           main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2016-07-01 16:15:27.082  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.Object(true)
+2016-07-01 16:15:27.082  INFO 2904 --- [           main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2016-07-01 16:15:27.082  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.Object(true)
+2016-07-01 16:15:27.082  INFO 2904 --- [           main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /resume.org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:27.082  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /resume.org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:27.082  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was generic-postable-mvc-endpoint
+2016-07-01 16:15:27.082  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was generic-postable-mvc-endpoint
+2016-07-01 16:15:27.082  INFO 2904 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingPOST_4
+2016-07-01 16:15:27.082  INFO 2904 --- [           main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /resume.json.org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:27.082  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /resume.json.org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:27.082  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was generic-postable-mvc-endpoint
+2016-07-01 16:15:27.082  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was generic-postable-mvc-endpoint
+2016-07-01 16:15:27.082  INFO 2904 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingPOST_5
+2016-07-01 16:15:27.082  INFO 2904 --- [           main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: org.springframework.hateoas.ResourceSupport(true)
+2016-07-01 16:15:27.082  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key org.springframework.hateoas.ResourceSupport(true)
+2016-07-01 16:15:27.082  INFO 2904 --- [           main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: org.springframework.hateoas.ResourceSupport(true)
+2016-07-01 16:15:27.082  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key org.springframework.hateoas.ResourceSupport(true)
+2016-07-01 16:15:27.097  INFO 2904 --- [           main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: org.springframework.hateoas.ResourceSupport(true)
+2016-07-01 16:15:27.097  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key org.springframework.hateoas.ResourceSupport(true)
+2016-07-01 16:15:27.097  INFO 2904 --- [           main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: org.springframework.hateoas.ResourceSupport(true)
+2016-07-01 16:15:27.097  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key org.springframework.hateoas.ResourceSupport(true)
+2016-07-01 16:15:27.097  INFO 2904 --- [           main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: org.springframework.hateoas.Link(true)
+2016-07-01 16:15:27.097  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key org.springframework.hateoas.Link(true)
+2016-07-01 16:15:27.097  INFO 2904 --- [           main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: org.springframework.hateoas.Link(true)
+2016-07-01 16:15:27.097  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key org.springframework.hateoas.Link(true)
+2016-07-01 16:15:27.097  INFO 2904 --- [           main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /actuator.org.springframework.boot.actuate.endpoint.mvc.HalJsonMvcEndpoint.links.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:27.097  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /actuator.org.springframework.boot.actuate.endpoint.mvc.HalJsonMvcEndpoint.links.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:27.097  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method links was hal-json-mvc-endpoint
+2016-07-01 16:15:27.113  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method links was hal-json-mvc-endpoint
+2016-07-01 16:15:27.113  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method links was hal-json-mvc-endpoint
+2016-07-01 16:15:27.129  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method links was hal-json-mvc-endpoint
+2016-07-01 16:15:27.129  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method links was hal-json-mvc-endpoint
+2016-07-01 16:15:27.129  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method links was hal-json-mvc-endpoint
+2016-07-01 16:15:27.129  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method links was hal-json-mvc-endpoint
+2016-07-01 16:15:27.129  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method links was hal-json-mvc-endpoint
+2016-07-01 16:15:27.129  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method links was hal-json-mvc-endpoint
+2016-07-01 16:15:27.129  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method links was hal-json-mvc-endpoint
+2016-07-01 16:15:27.144  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method links was hal-json-mvc-endpoint
+2016-07-01 16:15:27.144  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method links was hal-json-mvc-endpoint
+2016-07-01 16:15:27.144  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method links was hal-json-mvc-endpoint
+2016-07-01 16:15:27.144  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method links was hal-json-mvc-endpoint
+2016-07-01 16:15:27.144  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method links was hal-json-mvc-endpoint
+2016-07-01 16:15:27.144  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method links was hal-json-mvc-endpoint
+2016-07-01 16:15:27.144  INFO 2904 --- [           main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /actuator.json.org.springframework.boot.actuate.endpoint.mvc.HalJsonMvcEndpoint.links.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:27.144  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /actuator.json.org.springframework.boot.actuate.endpoint.mvc.HalJsonMvcEndpoint.links.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:27.144  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method links was hal-json-mvc-endpoint
+2016-07-01 16:15:27.144  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method links was hal-json-mvc-endpoint
+2016-07-01 16:15:27.144  INFO 2904 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: linksUsingGET_1
+2016-07-01 16:15:27.144  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method links was hal-json-mvc-endpoint
+2016-07-01 16:15:27.160  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method links was hal-json-mvc-endpoint
+2016-07-01 16:15:27.160  INFO 2904 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: linksUsingHEAD_1
+2016-07-01 16:15:27.160  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method links was hal-json-mvc-endpoint
+2016-07-01 16:15:27.160  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method links was hal-json-mvc-endpoint
+2016-07-01 16:15:27.160  INFO 2904 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: linksUsingPOST_1
+2016-07-01 16:15:27.160  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method links was hal-json-mvc-endpoint
+2016-07-01 16:15:27.160  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method links was hal-json-mvc-endpoint
+2016-07-01 16:15:27.160  INFO 2904 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: linksUsingPUT_1
+2016-07-01 16:15:27.160  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method links was hal-json-mvc-endpoint
+2016-07-01 16:15:28.128  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method links was hal-json-mvc-endpoint
+2016-07-01 16:15:28.285  INFO 2904 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: linksUsingPATCH_1
+2016-07-01 16:15:28.285  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method links was hal-json-mvc-endpoint
+2016-07-01 16:15:28.285  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method links was hal-json-mvc-endpoint
+2016-07-01 16:15:28.285  INFO 2904 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: linksUsingDELETE_1
+2016-07-01 16:15:28.285  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method links was hal-json-mvc-endpoint
+2016-07-01 16:15:28.285  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method links was hal-json-mvc-endpoint
+2016-07-01 16:15:28.285  INFO 2904 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: linksUsingOPTIONS_1
+2016-07-01 16:15:28.285  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method links was hal-json-mvc-endpoint
+2016-07-01 16:15:28.285  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method links was hal-json-mvc-endpoint
+2016-07-01 16:15:28.285  INFO 2904 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: linksUsingTRACE_1
+2016-07-01 16:15:28.300  INFO 2904 --- [           main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2016-07-01 16:15:28.300  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.Object(true)
+2016-07-01 16:15:28.300  INFO 2904 --- [           main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2016-07-01 16:15:28.300  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.Object(true)
+2016-07-01 16:15:28.300  INFO 2904 --- [           main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /health.org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:28.300  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /health.org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:28.300  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was health-mvc-endpoint
+2016-07-01 16:15:28.300  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was health-mvc-endpoint
+2016-07-01 16:15:28.300  INFO 2904 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_20
+2016-07-01 16:15:28.300  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was health-mvc-endpoint
+2016-07-01 16:15:28.300  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was health-mvc-endpoint
+2016-07-01 16:15:28.300  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was health-mvc-endpoint
+2016-07-01 16:15:28.300  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was health-mvc-endpoint
+2016-07-01 16:15:28.316  INFO 2904 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingPOST_6
+2016-07-01 16:15:28.316  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was health-mvc-endpoint
+2016-07-01 16:15:28.316  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was health-mvc-endpoint
+2016-07-01 16:15:29.769  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was health-mvc-endpoint
+2016-07-01 16:15:29.769  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was health-mvc-endpoint
+2016-07-01 16:15:29.769  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was health-mvc-endpoint
+2016-07-01 16:15:29.769  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was health-mvc-endpoint
+2016-07-01 16:15:29.769  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was health-mvc-endpoint
+2016-07-01 16:15:29.769  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was health-mvc-endpoint
+2016-07-01 16:15:29.769  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was health-mvc-endpoint
+2016-07-01 16:15:29.784  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was health-mvc-endpoint
+2016-07-01 16:15:29.784  INFO 2904 --- [           main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /health.json.org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:29.784  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /health.json.org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:29.784  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was health-mvc-endpoint
+2016-07-01 16:15:29.784  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was health-mvc-endpoint
+2016-07-01 16:15:29.784  INFO 2904 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_21
+2016-07-01 16:15:29.784  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was health-mvc-endpoint
+2016-07-01 16:15:29.784  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was health-mvc-endpoint
+2016-07-01 16:15:29.784  INFO 2904 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingHEAD_1
+2016-07-01 16:15:29.800  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was health-mvc-endpoint
+2016-07-01 16:15:29.800  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was health-mvc-endpoint
+2016-07-01 16:15:29.800  INFO 2904 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingPOST_7
+2016-07-01 16:15:29.800  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was health-mvc-endpoint
+2016-07-01 16:15:29.800  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was health-mvc-endpoint
+2016-07-01 16:15:29.800  INFO 2904 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingPUT_1
+2016-07-01 16:15:29.816  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was health-mvc-endpoint
+2016-07-01 16:15:29.816  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was health-mvc-endpoint
+2016-07-01 16:15:29.816  INFO 2904 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingPATCH_1
+2016-07-01 16:15:29.816  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was health-mvc-endpoint
+2016-07-01 16:15:29.816  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was health-mvc-endpoint
+2016-07-01 16:15:29.816  INFO 2904 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingDELETE_1
+2016-07-01 16:15:29.816  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was health-mvc-endpoint
+2016-07-01 16:15:29.816  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was health-mvc-endpoint
+2016-07-01 16:15:29.816  INFO 2904 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingOPTIONS_1
+2016-07-01 16:15:29.816  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was health-mvc-endpoint
+2016-07-01 16:15:29.816  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was health-mvc-endpoint
+2016-07-01 16:15:29.816  INFO 2904 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingTRACE_1
+2016-07-01 16:15:29.816  INFO 2904 --- [           main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2016-07-01 16:15:29.816  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.Object(true)
+2016-07-01 16:15:29.816  INFO 2904 --- [           main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2016-07-01 16:15:29.816  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.Object(true)
+2016-07-01 16:15:29.816  INFO 2904 --- [           main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /metrics.org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:29.816  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /metrics.org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:29.816  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was metrics-mvc-endpoint
+2016-07-01 16:15:29.816  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was metrics-mvc-endpoint
+2016-07-01 16:15:29.816  INFO 2904 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_22
+2016-07-01 16:15:29.831  INFO 2904 --- [           main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /metrics.json.org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:29.831  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /metrics.json.org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:29.831  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was metrics-mvc-endpoint
+2016-07-01 16:15:29.831  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was metrics-mvc-endpoint
+2016-07-01 16:15:29.831  INFO 2904 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingGET_23
+2016-07-01 16:15:29.831  INFO 2904 --- [           main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2016-07-01 16:15:29.831  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.Object(true)
+2016-07-01 16:15:29.831  INFO 2904 --- [           main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2016-07-01 16:15:29.831  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.Object(true)
+2016-07-01 16:15:29.831  INFO 2904 --- [           main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /metrics/{name:.*}.org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:29.831  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /metrics/{name:.*}.org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:29.831  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method value was metrics-mvc-endpoint
+2016-07-01 16:15:29.831  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method value was metrics-mvc-endpoint
+2016-07-01 16:15:29.831  INFO 2904 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: valueUsingGET_1
+2016-07-01 16:15:29.831  INFO 2904 --- [           main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2016-07-01 16:15:29.831  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.Object(true)
+2016-07-01 16:15:29.831  INFO 2904 --- [           main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2016-07-01 16:15:29.831  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.Object(true)
+2016-07-01 16:15:29.831  INFO 2904 --- [           main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /restart.org.springframework.cloud.context.restart.RestartMvcEndpoint.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:29.831  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /restart.org.springframework.cloud.context.restart.RestartMvcEndpoint.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:29.831  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was restart-mvc-endpoint
+2016-07-01 16:15:29.831  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was restart-mvc-endpoint
+2016-07-01 16:15:29.831  INFO 2904 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingPOST_8
+2016-07-01 16:15:29.831  INFO 2904 --- [           main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /restart.json.org.springframework.cloud.context.restart.RestartMvcEndpoint.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:29.831  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /restart.json.org.springframework.cloud.context.restart.RestartMvcEndpoint.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:29.831  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was restart-mvc-endpoint
+2016-07-01 16:15:29.831  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was restart-mvc-endpoint
+2016-07-01 16:15:29.831  INFO 2904 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingPOST_9
+2016-07-01 16:15:29.831  INFO 2904 --- [           main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2016-07-01 16:15:29.831  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key java.lang.Object(true)
+2016-07-01 16:15:29.831  INFO 2904 --- [           main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: java.lang.Object(true)
+2016-07-01 16:15:29.831  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key java.lang.Object(true)
+2016-07-01 16:15:29.831  INFO 2904 --- [           main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /shutdown.org.springframework.boot.actuate.endpoint.mvc.ShutdownMvcEndpoint.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:29.831  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /shutdown.org.springframework.boot.actuate.endpoint.mvc.ShutdownMvcEndpoint.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:29.847  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was shutdown-mvc-endpoint
+2016-07-01 16:15:29.847  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was shutdown-mvc-endpoint
+2016-07-01 16:15:29.847  INFO 2904 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingPOST_10
+2016-07-01 16:15:29.847  INFO 2904 --- [           main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /shutdown.json.org.springframework.boot.actuate.endpoint.mvc.ShutdownMvcEndpoint.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:29.847  INFO 2904 --- [           main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /shutdown.json.org.springframework.boot.actuate.endpoint.mvc.ShutdownMvcEndpoint.invoke.DefaultGenericTypeNamingStrategy
+2016-07-01 16:15:29.847  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was shutdown-mvc-endpoint
+2016-07-01 16:15:29.847  INFO 2904 --- [           main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method invoke was shutdown-mvc-endpoint
+2016-07-01 16:15:29.847  INFO 2904 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: invokeUsingPOST_11
+2016-07-01 16:15:29.988  INFO 2904 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8077 (http)
+2016-07-01 16:15:29.988  INFO 2904 --- [           main] c.n.e.EurekaDiscoveryClientConfiguration : Updating port to 8077
+2016-07-01 16:15:30.003  INFO 2904 --- [           main] uk.co.mickrisk.CandidateApplication      : Started CandidateApplication in 79.912 seconds (JVM running for 102.414)
+2016-07-01 16:20:22.398  INFO 2904 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-01 16:25:22.420  INFO 2904 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-01 16:30:22.442  INFO 2904 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-01 16:35:22.475  INFO 2904 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-01 16:40:22.498  INFO 2904 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-01 16:45:22.531  INFO 2904 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-01 16:50:22.559  INFO 2904 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-01 16:55:22.595  INFO 2904 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-01 17:00:22.628  INFO 2904 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-01 17:05:22.650  INFO 2904 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-01 17:10:22.682  INFO 2904 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-01 17:15:22.714  INFO 2904 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-01 17:20:22.737  INFO 2904 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-01 17:25:22.758  INFO 2904 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-01 17:30:22.783  INFO 2904 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-01 17:35:22.809  INFO 2904 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-01 17:40:22.844  INFO 2904 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-01 17:45:22.867  INFO 2904 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-01 17:50:22.894  INFO 2904 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-01 17:55:22.928  INFO 2904 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-01 18:00:22.963  INFO 2904 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-01 18:05:22.993  INFO 2904 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-01 18:10:23.030  INFO 2904 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-01 18:15:23.071  INFO 2904 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-01 18:20:23.113  INFO 2904 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-01 18:25:23.155  INFO 2904 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-01 18:30:23.189  INFO 2904 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-01 18:35:23.228  INFO 2904 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-01 18:40:23.271  INFO 2904 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-01 18:45:23.308  INFO 2904 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-01 18:50:23.350  INFO 2904 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-01 18:55:23.401  INFO 2904 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-01 19:00:23.451  INFO 2904 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-01 19:05:23.509  INFO 2904 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-01 19:10:23.558  INFO 2904 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-01 19:15:23.619  INFO 2904 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-01 19:20:23.673  INFO 2904 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-01 19:25:23.723  INFO 2904 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-01 19:30:23.767  INFO 2904 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-01 19:35:23.815  INFO 2904 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-01 19:40:23.865  INFO 2904 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-01 19:45:23.912  INFO 2904 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-01 19:50:23.970  INFO 2904 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-01 19:55:24.021  INFO 2904 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-01 20:00:24.071  INFO 2904 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-01 20:05:24.126  INFO 2904 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-01 20:10:24.185  INFO 2904 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-01 20:15:24.227  INFO 2904 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-01 20:20:26.460  INFO 2904 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-01 20:25:26.670  INFO 2904 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-01 20:30:26.730  INFO 2904 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-01 20:35:26.790  INFO 2904 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-01 20:40:26.840  INFO 2904 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-01 20:45:26.883  INFO 2904 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-01 20:50:26.940  INFO 2904 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-01 20:55:26.986  INFO 2904 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-01 20:58:40.040  INFO 2904 --- [nio-8077-exec-1] o.a.c.c.C.[.[.[/candidateservice]        : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-07-01 20:58:40.055  INFO 2904 --- [nio-8077-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-07-01 20:58:40.368  INFO 2904 --- [nio-8077-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 313 ms
+2016-07-01 21:00:27.015  INFO 2904 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-01 21:05:27.042  INFO 2904 --- [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2016-07-01 21:07:06.128  INFO 2904 --- [nio-8077-exec-3] uk.co.mickrisk.CandidateController       : Added:Mr. Steve Pitcher
+2016-07-01 21:07:50.961  INFO 2904 --- [nio-8077-exec-9] uk.co.mickrisk.CandidateController       : Added:Mr. Steve Pitcher
+2016-07-01 21:08:45.178  INFO 2904 --- [       Thread-6] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@657c742d: startup date [Fri Jul 01 16:14:16 BST 2016]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@351f5ee5
+2016-07-01 21:08:45.178  INFO 2904 --- [       Thread-6] c.n.e.EurekaDiscoveryClientConfiguration : Unregistering application voting-candidate with eureka with status DOWN
+2016-07-01 21:08:45.178  WARN 2904 --- [       Thread-6] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1467403725178, current=DOWN, previous=UP]
+2016-07-01 21:08:45.194  INFO 2904 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_VOTING-CANDIDATE/localhost:voting-candidate:8077: registering service...
+2016-07-01 21:08:45.258  INFO 2904 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_VOTING-CANDIDATE/localhost:voting-candidate:8077 - registration status: 204
+2016-07-01 21:08:45.273  INFO 2904 --- [       Thread-6] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_VOTING-CANDIDATE/localhost:voting-candidate:8077 - deregister  status: 200
+2016-07-01 21:08:45.289  INFO 2904 --- [       Thread-6] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2016-07-01 21:08:45.367  INFO 2904 --- [       Thread-6] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2016-07-01 21:08:45.367  INFO 2904 --- [       Thread-6] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2016-07-01 21:08:45.430  INFO 2904 --- [       Thread-6] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2016-07-01 21:08:45.430  INFO 2904 --- [       Thread-6] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2016-07-01 21:08:45.445  INFO 2904 --- [       Thread-6] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2016-07-01 21:08:45.523  INFO 2904 --- [       Thread-6] o.apache.catalina.core.StandardService   : Stopping service Tomcat
+2016-07-01 21:08:45.523  INFO 2904 --- [ost-startStop-2] o.a.c.c.C.[.[.[/candidateservice]        : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2016-07-01 21:08:45.539  WARN 2904 --- [ost-startStop-2] o.a.c.loader.WebappClassLoaderBase       : The web application [candidateservice] appears to have started a thread named [Thread-6] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+ java.util.concurrent.FutureTask.awaitDone(FutureTask.java:429)
+ java.util.concurrent.FutureTask.get(FutureTask.java:191)
+ org.apache.catalina.core.ContainerBase.stopInternal(ContainerBase.java:972)
+ org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:224)
+ org.apache.catalina.core.StandardService.stopInternal(StandardService.java:502)
+ org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:224)
+ org.apache.catalina.core.StandardServer.stopInternal(StandardServer.java:808)
+ org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:224)
+ org.apache.catalina.startup.Tomcat.stop(Tomcat.java:356)
+ org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.stop(TomcatEmbeddedServletContainer.java:236)
+ org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.stopAndReleaseEmbeddedServletContainer(EmbeddedWebApplicationContext.java:302)
+ org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onClose(EmbeddedWebApplicationContext.java:151)
+ org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:988)
+ org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:934)
+ org.springframework.boot.actuate.endpoint.ShutdownEndpoint$1.run(ShutdownEndpoint.java:70)
+ java.lang.Thread.run(Thread.java:745)
+2016-07-01 21:08:45.539  WARN 2904 --- [ost-startStop-2] o.a.c.loader.WebappClassLoaderBase       : The web application [candidateservice] appears to have started a thread named [Tomcat-startStop-2] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+ java.util.concurrent.FutureTask.awaitDone(FutureTask.java:429)
+ java.util.concurrent.FutureTask.get(FutureTask.java:191)
+ org.apache.catalina.core.ContainerBase.stopInternal(ContainerBase.java:972)
+ org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:224)
+ org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1424)
+ org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1413)
+ java.util.concurrent.FutureTask.run(FutureTask.java:266)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+ java.lang.Thread.run(Thread.java:745)
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 04:54 h
+[INFO] Finished at: 2016-07-01T21:08:45+01:00
+[INFO] Final Memory: 40M/103M
+[INFO] ------------------------------------------------------------------------

@@ -60,9 +60,7 @@ def get_candidate(candidate_name)
 end
 
 def check_candidate(expected_candidate)
-  uri = URI("http://#{@candidate_host}:#{@candidate_port}/candidateservice/candidates")
-  res = Net::HTTP.get(uri)
-  candidates = JSON.parse res
+  candidates = get_all_candidates
   found_candidate = false
   puts "LOOKING FOR:#{expected_candidate}"
   candidates.each  do |candidate |
@@ -73,6 +71,13 @@ def check_candidate(expected_candidate)
   end
 
   expect(found_candidate).to be_truthy
+end
+
+def get_all_candidates
+  uri = URI("http://#{@candidate_host}:#{@candidate_port}/candidateservice/candidates")
+  res = Net::HTTP.get(uri)
+  candidates = JSON.parse res
+  return candidates
 end
 
 def clear_all_candidates

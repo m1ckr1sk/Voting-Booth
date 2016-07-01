@@ -1,4 +1,7 @@
 Feature: Voting booth
+As a Voter	
+I want to be able to vote for a candidate	
+So that I can help choose who will be president
 
 Scenario: Can cast a vote
 Given I have voting booth service

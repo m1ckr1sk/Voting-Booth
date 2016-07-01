@@ -3,6 +3,7 @@ package uk.co.mickrisk;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,6 +12,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.sun.research.ws.wadl.Request;
+
+import ch.qos.logback.access.pattern.RequestMethodConverter;
 
 @RestController
 public class BoothController {
@@ -61,6 +65,13 @@ public class BoothController {
 		VoteCollection voteCollection = new VoteCollection(new Long(boothIdentifier));
 		voteCollection.setVotes(voteRepository.findAll());
 		return mapper.writeValueAsString(voteCollection);
+	}
+	
+	@RequestMapping(value = "/reset", method = RequestMethod.DELETE)
+	@Transactional
+	public String deleteVotes(){
+		voteRepository.deleteAll();
+		return "Deleted all votes";
 	}
 
 
