@@ -10,16 +10,32 @@ Given(/^I have voting booth service$/) do
   @booth_port = doc.elements["//instance/port"].text
 
   clear_all_booth_votes
+  
+  @current_voter_index = 0
 end
 
 When(/^I cast a vote from "([^"]*)" for "([^"]*)"$/) do |voter_name, candidate_name|
   cast_vote(candidate_name, voter_name)
 end
 
+When(/^I cast a vote from "([^"]*)" voters for "([^"]*)"$/) do |voter_numbers, candidate_name|
+  
+  for voter_index in 0..voter_numbers.to_i - 1  do
+    cast_vote(candidate_name, @voter_names[@current_voter_index])
+    @current_voter_index = @current_voter_index + 1 
+  end
+end
+
 Then(/^the voter "([^"]*)" must have registered a vote$/) do |voter_name|
   voter = get_voter(voter_name)
   expect(voter["hasVoted"]).to be_truthy
-  close_booth()
+end
+
+Then(/^the "([^"]*)" voters must have registered a vote$/) do |voter_numbers|
+  for voter_index in 0..voter_numbers.to_i - 1  do
+    voter = get_voter(@voter_names[voter_index])
+    expect(voter["hasVoted"]).to be_truthy
+  end
 end
 
 def cast_vote(candidate_name, voter_name)

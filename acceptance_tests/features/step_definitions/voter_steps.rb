@@ -25,18 +25,18 @@ Then(/^voter "([^"]*)" must be eligible to vote$/) do |expected_voter|
 end
 
 When(/^I add "([^"]*)" voter names$/) do |number_of_names_to_add|
-  @names = []
-  for name_index in 0..number_of_names_to_add.to_i
-    @names << Faker::Name.name
+  @voter_names = []
+  for name_index in 1..number_of_names_to_add.to_i
+    @voter_names << Faker::Name.name
   end
 
-  @names.each do |name|
+  @voter_names.each do |name|
     add_voter(name)
   end
 end
 
 Then(/^all voters must be eligible to vote$/) do
-  @names.each do |name|
+  ss.each do |name|
      check_voter(name)
    end
 end
